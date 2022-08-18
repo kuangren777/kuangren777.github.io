@@ -530,6 +530,30 @@
 
 
 
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "从零搭建自己的博客（部署到GitHub）（二）" -->
+  var giteement = new Giteement({
+    id: '20220812164946',
+    owner: 'kuangren777',
+    repo: 'kr777.xyz',
+    backcall_uri: 'https://kr777.xyz/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '9ef72fcd7da779365e48c2d6c21df5f5539fa654d1b1cd4a977bd90fbd94e36c',
+      client_secret: 'aae4d081b486b3340b934324a15a1a5800a4156cb52ac29273da0d6af8a63982'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
+
+
+
+
 
   
   <div id="gitment-ctn"></div>
@@ -542,7 +566,7 @@
     <!-- id: "从零搭建自己的博客（部署到GitHub）（二）" -->
     var gitment = new Gitment({
       id: "20220812164946",
-      owner: 'kuangren777',
+      owner: 'false#kuangren777',
       repo: 'kuangren777',
       oauth: {
         client_id: '3bab5f35c41197dbc7db',
