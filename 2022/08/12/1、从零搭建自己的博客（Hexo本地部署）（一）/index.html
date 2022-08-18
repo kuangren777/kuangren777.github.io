@@ -546,22 +546,35 @@
 
 
 
-<div id="SOHUCS" sid="1、从零搭建自己的博客（Hexo本地部署）（一）" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
 
 
 
 
 
 
+  
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "从零搭建自己的博客（Hexo本地部署）（一）" -->
+    var gitment = new Gitment({
+      id: "20220812102255",
+      owner: 'kuangren777',
+      repo: 'kuangren777',
+      oauth: {
+        client_id: '3bab5f35c41197dbc7db',
+        client_secret: 'cbd2df8a8fba09334f13c8b92ecf3b3fd51ac20a',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
+
+  
 
 
 
