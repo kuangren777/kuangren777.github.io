@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。">
+  <meta name="description" content="本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）">
 <meta property="og:url" content="https://kr777.xyz/2022/08/14/6%E3%80%81%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91SSR/index.html">
 <meta property="og:site_name" content="狂人的博客">
-<meta property="og:description" content="史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。">
+<meta property="og:description" content="本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142014304.png">
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142016462.png">
@@ -45,7 +45,7 @@
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337851.png">
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337005.png">
 <meta property="article:published_time" content="2022-08-14T12:12:03.000Z">
-<meta property="article:modified_time" content="2022-08-27T08:25:15.836Z">
+<meta property="article:modified_time" content="2022-08-27T16:06:33.594Z">
 <meta property="article:author" content="狂人的博客">
 <meta property="article:tag" content="ssr">
 <meta name="twitter:card" content="summary">
@@ -305,7 +305,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="史上最详细的科学上网SSR搭建（hostwinds-ssr-google-bbr）"><a href="#史上最详细的科学上网SSR搭建（hostwinds-ssr-google-bbr）" class="headerlink" title="史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）"></a>史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）</h1><p>本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。</p>
+    <p>本人在这方面踩了许多坑，很多人的教程不是这个不对，就是缺胳膊少腿，不完整。我在这里整理出一个大合集，大家看完这个就可以直接毕业了。</p>
 <span id="more"></span>
 
 <blockquote>
@@ -563,7 +563,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%AF%A6%E7%BB%86%E7%9A%84%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91SSR%E6%90%AD%E5%BB%BA%EF%BC%88hostwinds-ssr-google-bbr%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">史上最详细的科学上网SSR搭建（hostwinds+ssr+google bbr）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hostwinds"><span class="toc-number">1.1.</span> <span class="toc-text">Hostwinds</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B3%A8%E5%86%8CHostwind%E8%B4%A6%E5%8F%B7"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、注册Hostwind账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AE%A2%E8%B4%AD%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、订购服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5IP"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">检查IP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-number">1.1.2.1.1.</span> <span class="toc-text">1、打开命令提示符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81PING%E5%85%A8%E5%9B%BD%E6%A3%80%E6%B5%8B%E5%9C%B0%E5%9D%80%EF%BC%9Ahttp-ping-chinaz-com"><span class="toc-number">1.1.2.1.2.</span> <span class="toc-text">2、PING全国检测地址：http:&#x2F;&#x2F;ping.chinaz.com</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%94%B5%E8%84%91%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、用本地电脑连接远端服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%85SSR"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、在服务器端安装SSR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Google-BBR%E5%8A%A0%E9%80%9F"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、Google BBR加速</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">一、注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8E%9F%E7%89%88-Google-BBR"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">二、原版 Google BBR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%AD%94%E6%94%B9%E7%89%88-Google-BBR"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">三、魔改版 Google BBR</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hostwinds"><span class="toc-number">1.</span> <span class="toc-text">Hostwinds</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B3%A8%E5%86%8CHostwind%E8%B4%A6%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">1、注册Hostwind账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AE%A2%E8%B4%AD%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">2、订购服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5IP"><span class="toc-number">1.2.1.</span> <span class="toc-text">检查IP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">1、打开命令提示符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81PING%E5%85%A8%E5%9B%BD%E6%A3%80%E6%B5%8B%E5%9C%B0%E5%9D%80%EF%BC%9Ahttp-ping-chinaz-com"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">2、PING全国检测地址：http:&#x2F;&#x2F;ping.chinaz.com</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%94%A8%E6%9C%AC%E5%9C%B0%E7%94%B5%E8%84%91%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3、用本地电脑连接远端服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%85SSR"><span class="toc-number">1.4.</span> <span class="toc-text">4、在服务器端安装SSR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Google-BBR%E5%8A%A0%E9%80%9F"><span class="toc-number">1.5.</span> <span class="toc-text">5、Google BBR加速</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.5.1.</span> <span class="toc-text">一、注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8E%9F%E7%89%88-Google-BBR"><span class="toc-number">1.5.2.</span> <span class="toc-text">二、原版 Google BBR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%AD%94%E6%94%B9%E7%89%88-Google-BBR"><span class="toc-number">1.5.3.</span> <span class="toc-text">三、魔改版 Google BBR</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
