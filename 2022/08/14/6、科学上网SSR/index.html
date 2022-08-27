@@ -47,10 +47,10 @@
 <meta property="article:published_time" content="2022-08-14T12:12:03.000Z">
 <meta property="article:modified_time" content="2022-08-27T16:20:44.221Z">
 <meta property="article:author" content="狂人的博客">
-<meta property="article:tag" content="云服务器">
 <meta property="article:tag" content="ssr">
 <meta property="article:tag" content="科学上网">
 <meta property="article:tag" content="cent os">
+<meta property="article:tag" content="云服务器">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142014304.png">
   
@@ -355,17 +355,20 @@
 </blockquote>
 <blockquote>
 <p>Mac：可以直接使用”终端”</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> su</span><br><span class="line"><span class="comment">#输入你电脑的开机密码</span></span><br><span class="line">ssh 你主机的ip</span><br><span class="line"><span class="comment">#yes后输入服务器下图红框中的密码</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo su
+#输入你电脑的开机密码
+ssh 你主机的ip
+#yes后输入服务器下图红框中的密码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142301861.png" alt="image-20220814下午110115806"></p>
 </blockquote>
 <p>&#x3D;&#x3D;输入密码时，或者复制的密码粘贴的时候，是什么都不会显示的，输入完整正确后你直接回车即可！&#x3D;&#x3D;</p>
 <p>（复制好密码后，直接在SSH窗口点击鼠标右键即自动完成粘贴了）如果出现：[root@主机名 ~]# 就表示连接成功了！</p>
 <h3 id="4、在服务器端安装SSR"><a href="#4、在服务器端安装SSR" class="headerlink" title="4、在服务器端安装SSR"></a>4、在服务器端安装SSR</h3><p>连接后执行</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:<span class="regexp">//</span>freed.ga<span class="regexp">/github/</span>shadowsocksR.sh; bash shadowsocksR.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">wget --no-check-certificate https:&#x2F;&#x2F;freed.ga&#x2F;github&#x2F;shadowsocksR.sh; bash shadowsocksR.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>如若无其他提示，直接跳过下面这一步<br>&#x3D;&#x3D;如提示<code>wget :command not found</code>请执行&#x3D;&#x3D;</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;yum <span class="keyword">install</span> wget -y</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&gt;yum install wget -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后按提示操作。</p>
 </blockquote>
 <p>任意输入密码<strong>一定要自己记好</strong>，按照提示输入端口，避开常用端口。<br>然后按任意键搭建。<br><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142314934.png" alt="image-20220814下午111444837"></p>
@@ -381,7 +384,7 @@
 <p>3、原版和魔改版 Google BBR 在不同地区的服务器上会有不同效果，具体孰优孰劣请分别安装进行测试。</p>
 <p>4、中途打断的话，请重新安装服务器，从本教程（3）开始。</p>
 <h4 id="二、原版-Google-BBR"><a href="#二、原版-Google-BBR" class="headerlink" title="二、原版 Google BBR"></a>二、原版 Google BBR</h4><p>连接服务器，按照下图提示，我们首先复制命令：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:<span class="regexp">//gi</span>thub.com<span class="regexp">/teddysun/</span>across<span class="regexp">/raw/m</span>aster<span class="regexp">/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./</span>bbr.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">wget --no-check-certificate https:&#x2F;&#x2F;github.com&#x2F;teddysun&#x2F;across&#x2F;raw&#x2F;master&#x2F;bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; .&#x2F;bbr.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>到服务器端，鼠标右击选择粘贴，回车继续。</p>
 <p><a target="_blank" rel="noopener" href="https://static.vultrcn.com/wp-content/uploads/2018/03/bbr01.png"><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337614.png" alt="img"></a></p>
 <p>回车后系统会自动下载脚本并执行。脚本执行后会显示出当前系统以及系统内核版本，按照下图提示，我们直接回车确认安装即可。</p>
@@ -389,20 +392,20 @@
 <p>回车后脚本会继续执行并自动安装最新版系统内核同时开启 Google BBR 拥塞控制算法。当脚本安装完毕后会询问我们是否重启服务器，按照下图提示，我们首先输入“y”，然后回车确认重启即可。</p>
 <p><a target="_blank" rel="noopener" href="https://static.vultrcn.com/wp-content/uploads/2018/03/bbr03.png"><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337688.png" alt="img"></a></p>
 <p>确认重启后，软件会断开连接。等待 3~5 分钟服务器即可重启完毕，我们<strong>重新连接服务器</strong>，然后依次运行下列命令并对比输出值是否一致。</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl <span class="built_in">net</span>.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysctl net.ipv4.tcp_available_congestion_control<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行后输出值需为：<strong>net.ipv4.tcp_available_congestion_control &#x3D; reno cubic bbr</strong>。</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl <span class="built_in">net</span>.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysctl net.ipv4.tcp_congestion_control<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行后输出值需为：<strong>net.ipv4.tcp_congestion_control &#x3D; bbr</strong>。</p>
-<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.core.<span class="keyword">default</span><span class="number">_</span>qdisc</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysctl net.core.default_qdisc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行后输出值需为：<strong>net.core.default_qdisc &#x3D; fq</strong>。</p>
 <p>以上三条命令的输出值正确后则说明原版 Google BBR 已经成功安装并开机自启动。</p>
 <h4 id="三、魔改版-Google-BBR"><a href="#三、魔改版-Google-BBR" class="headerlink" title="三、魔改版 Google BBR"></a>三、魔改版 Google BBR</h4><p>在本节的注意事项中也说明了魔改版 Google BBR 是在原版 Google BBR 的基础上修改了一些参数，所以两者的性能会有所不同，具体效果则需要大家可以分别进行测试。</p>
 <p>PS：魔改版 Google BBR 和 原版 Google BBR 不能够共存的，不要同时安装。</p>
 <p>连接服务器，按照下图提示，我们首先复制命令：</p>
 <p><em># CentOS 6&#x2F;7 x64 系统请用这个</em></p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/nanqinlang-tcp/</span>tcp_nanqinlang<span class="regexp">/master/</span>General<span class="regexp">/CentOS/</span>bash/tcp_nanqinlang-<span class="number">1.3</span>.<span class="number">2</span>.sh &amp;&amp; bash tcp_nanqinlang-<span class="number">1.3</span>.<span class="number">2</span>.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">wget --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nanqinlang-tcp&#x2F;tcp_nanqinlang&#x2F;master&#x2F;General&#x2F;CentOS&#x2F;bash&#x2F;tcp_nanqinlang-1.3.2.sh &amp;&amp; bash tcp_nanqinlang-1.3.2.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><em># Debian 7&#x2F;8 x64 系统请用这个</em></p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:<span class="regexp">//gi</span>thub.com<span class="regexp">/nanqinlang-tcp/</span>tcp_nanqinlang<span class="regexp">/releases/</span>download<span class="regexp">/3.4.2.1/</span>tcp_nanqinlang-fool-<span class="number">1.3</span>.<span class="number">0</span>.sh &amp;&amp; bash tcp_nanqinlang-fool-<span class="number">1.3</span>.<span class="number">0</span>.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">wget --no-check-certificate https:&#x2F;&#x2F;github.com&#x2F;nanqinlang-tcp&#x2F;tcp_nanqinlang&#x2F;releases&#x2F;download&#x2F;3.4.2.1&#x2F;tcp_nanqinlang-fool-1.3.0.sh &amp;&amp; bash tcp_nanqinlang-fool-1.3.0.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后回到 Xshell 软件，鼠标右击选择粘贴，回车继续。</p>
 <p><a target="_blank" rel="noopener" href="https://static.vultrcn.com/wp-content/uploads/2018/03/mod-bbr01.png"><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337820.png" alt="img"></a></p>
 <p>回车后系统会自动下载脚本并运行。按照下图提示，我们首先输入“1”（即升级内核），然后回车继续。</p>
@@ -413,9 +416,9 @@
 <p><a target="_blank" rel="noopener" href="https://static.vultrcn.com/wp-content/uploads/2018/03/mod-bbr04.png"><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337886.png" alt="img"></a></p>
 <p>确认重启后，Xshell 软件会断开连接。等待 3~5 分钟服务器即可重启完毕，我们<strong>重新连接服务器</strong>，按照下图提示，我们继续复制命令：</p>
 <p><em># CentOS 6&#x2F;7 x64 系统请用这个</em></p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">bash</span> tcp_nanqinlang-<span class="number">1</span>.<span class="number">3</span>.<span class="number">2</span>.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">bash tcp_nanqinlang-1.3.2.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><em># Debian 7&#x2F;8 x64 系统请用这个</em></p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">bash</span> tcp_nanqinlang-fool-<span class="number">1</span>.<span class="number">3</span>.<span class="number">0</span>.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">bash tcp_nanqinlang-fool-1.3.0.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>然后回到 Xshell 软件，鼠标右击选择粘贴，回车继续。</p>
 <p><a target="_blank" rel="noopener" href="https://static.vultrcn.com/wp-content/uploads/2018/03/mod-bbr05.png"><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208142337938.png" alt="img"></a></p>
 <p>回车后系统会自动运行脚本。按照下图提示，我们输入“2”（即开启魔改版 Google BBR 算法），然后回车继续即可。</p>
@@ -466,10 +469,6 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">云服务器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssr</a>
         		</li>
       		 
@@ -479,6 +478,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cent os</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">云服务器</a>
         		</li>
       		
 		</ul>
@@ -761,10 +764,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -782,6 +781,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">

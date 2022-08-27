@@ -273,7 +273,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">534字</span>
+      <span class="post-count">535字</span>
     </span>
   </span>
 
@@ -310,23 +310,26 @@
 <p>然后到最下面点Create就好啦。</p>
 <h2 id="git部署插件安装"><a href="#git部署插件安装" class="headerlink" title="git部署插件安装"></a>git部署插件安装</h2><p>进入终端</p>
 <p>进入<strong>myblog</strong>文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myblog/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd myblog&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装插件</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cnpm install --save hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这样就算装完了。</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121713927.png" alt="image-20220812下午51305885"></p>
-<h2 id="设置-config-yml"><a href="#设置-config-yml" class="headerlink" title="设置_config.yml"></a>设置_config.yml</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _<span class="built_in">config</span>.yml</span><br></pre></td></tr></table></figure>
+<h2 id="设置-config-yml"><a href="#设置-config-yml" class="headerlink" title="设置_config.yml"></a>设置_config.yml</h2><pre class="line-numbers language-none"><code class="language-none">vim _config.yml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>到最下面找到#Deployment，按<code>i</code>输入，把下面改成</p>
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span><span class="punctuation">:</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attribute">repo</span><span class="punctuation">:</span> <span class="string">你的GitHub上的仓库地址</span></span><br><span class="line">  <span class="attribute">branch</span><span class="punctuation">:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: &#39;git&#39;
+  repo: 你的GitHub上的仓库地址
+  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>记住！冒号后一定要加空格！！！</strong></p>
 <p>GitHub仓库地址在这里：</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121720807.png" alt="image-20220812下午52024708"></p>
 <p>改完<code>Esc</code>后<code>:wq</code>，保存并退出</p>
-<h2 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<h2 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h2><pre class="line-numbers language-none"><code class="language-none">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>卡住不动就<code>Ctrl+c</code>打断重来</p>
 <hr>
@@ -684,10 +687,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -705,6 +704,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">

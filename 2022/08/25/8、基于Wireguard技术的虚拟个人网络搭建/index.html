@@ -261,7 +261,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">770字</span>
+      <span class="post-count">839字</span>
     </span>
   </span>
 
@@ -270,7 +270,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -284,36 +284,113 @@
     <p>想要远程桌面异地办公或者其他内网穿透需求的小伙伴们可以考虑一下wireguard，是基于内核的轻量级软件。</p>
 <span id="more"></span>
 
-<h2 id="一、手动安装Wireguard"><a href="#一、手动安装Wireguard" class="headerlink" title="一、手动安装Wireguard"></a>一、手动安装Wireguard</h2><h3 id="1-安装Wireguard"><a href="#1-安装Wireguard" class="headerlink" title="1. 安装Wireguard"></a>1. 安装Wireguard</h3><h4 id="1-1-安装Wireguard（以ubuntu20-04为基础）"><a href="#1-1-安装Wireguard（以ubuntu20-04为基础）" class="headerlink" title="1.1 安装Wireguard（以ubuntu20.04为基础）"></a>1.1 安装Wireguard（以ubuntu20.04为基础）</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root权限</span></span><br><span class="line">sudo -i</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装wireguard软件</span></span><br><span class="line">apt install wireguard resolvconf -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#开启IP转发</span></span><br><span class="line">echo <span class="string">&quot;net.ipv4.ip_forward = 1&quot;</span> &gt;&gt; <span class="regexp">/etc/</span>sysctl.conf</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+<h2 id="一、手动安装Wireguard"><a href="#一、手动安装Wireguard" class="headerlink" title="一、手动安装Wireguard"></a>一、手动安装Wireguard</h2><h3 id="1-安装Wireguard"><a href="#1-安装Wireguard" class="headerlink" title="1. 安装Wireguard"></a>1. 安装Wireguard</h3><h4 id="1-1-安装Wireguard（以ubuntu20-04为基础）"><a href="#1-1-安装Wireguard（以ubuntu20-04为基础）" class="headerlink" title="1.1 安装Wireguard（以ubuntu20.04为基础）"></a>1.1 安装Wireguard（以ubuntu20.04为基础）</h4><pre class="line-numbers language-none"><code class="language-none">#root权限
+sudo -i
+
+#安装wireguard软件
+apt install wireguard resolvconf -y
+
+#开启IP转发
+echo &quot;net.ipv4.ip_forward &#x3D; 1&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf
+sysctl -p<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="1-2-安装Wireguard（以Cent-OS7为基础）"><a href="#1-2-安装Wireguard（以Cent-OS7为基础）" class="headerlink" title="1.2 安装Wireguard（以Cent OS7为基础）"></a>1.2 安装Wireguard（以Cent OS7为基础）</h4><blockquote>
 <p>官方安装文档： <a target="_blank" rel="noopener" href="https://www.wireguard.com/install/">https://www.wireguard.com/install/</a></p>
 </blockquote>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### <span class="keyword">Method</span> 2: users wishing <span class="keyword">to</span> stick <span class="keyword">with</span> the standard kernel may use ELRepo<span class="string">&#x27;s pre-built module:</span></span><br><span class="line"><span class="string">$ sudo yum install epel-release elrepo-release</span></span><br><span class="line"><span class="string">$ sudo yum install yum-plugin-elrepo</span></span><br><span class="line"><span class="string">$ sudo yum install kmod-wireguard wireguard-tools</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">### Method 2: users wishing to stick with the standard kernel may use ELRepo&#39;s pre-built module:
+$ sudo yum install epel-release elrepo-release
+$ sudo yum install yum-plugin-elrepo
+$ sudo yum install kmod-wireguard wireguard-tools<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h3 id="2-进入配置存储路径，调整目录权限"><a href="#2-进入配置存储路径，调整目录权限" class="headerlink" title="2. 进入配置存储路径，调整目录权限"></a>2. 进入配置存储路径，调整目录权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/wireguard/</span><br><span class="line"><span class="built_in">chmod</span> 0777 /etc/wireguard</span><br><span class="line"></span><br><span class="line"><span class="comment">#调整目录默认权限</span></span><br><span class="line"><span class="built_in">umask</span> 077</span><br></pre></td></tr></table></figure>
+<h3 id="2-进入配置存储路径，调整目录权限"><a href="#2-进入配置存储路径，调整目录权限" class="headerlink" title="2. 进入配置存储路径，调整目录权限"></a>2. 进入配置存储路径，调整目录权限</h3><pre class="line-numbers language-none"><code class="language-none">cd &#x2F;etc&#x2F;wireguard&#x2F;
+chmod 0777 &#x2F;etc&#x2F;wireguard
 
-<h3 id="3-生成服务器秘钥"><a href="#3-生成服务器秘钥" class="headerlink" title="3. 生成服务器秘钥"></a>3. 生成服务器秘钥</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#生成私钥</span></span><br><span class="line">wg genkey &gt; <span class="keyword">server</span>.key</span><br><span class="line"></span><br><span class="line"><span class="meta">#通过私钥生成公钥</span></span><br><span class="line">wg pubkey &lt; <span class="keyword">server</span>.key &gt; <span class="keyword">server</span>.key.pub</span><br></pre></td></tr></table></figure>
+#调整目录默认权限
+umask 077<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="4-生成客户端-client1-秘钥"><a href="#4-生成客户端-client1-秘钥" class="headerlink" title="4. 生成客户端(client1)秘钥"></a>4. 生成客户端(client1)秘钥</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">#生成私钥</span></span><br><span class="line"><span class="attr">wg genkey &gt; client1</span>.key</span><br><span class="line"></span><br><span class="line"><span class="attr">#通过私钥生成公钥</span></span><br><span class="line"><span class="attr">wg pubkey &lt; client1</span>.key &gt; clie<span class="symbol">nt1</span>.key.pub</span><br></pre></td></tr></table></figure>
+<h3 id="3-生成服务器秘钥"><a href="#3-生成服务器秘钥" class="headerlink" title="3. 生成服务器秘钥"></a>3. 生成服务器秘钥</h3><pre class="line-numbers language-none"><code class="language-none">#生成私钥
+wg genkey &gt; server.key
 
-<h3 id="5-显示所有生成的秘钥"><a href="#5-显示所有生成的秘钥" class="headerlink" title="5. 显示所有生成的秘钥"></a>5. 显示所有生成的秘钥</h3><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat server.<span class="keyword">key</span> <span class="variable">&amp;&amp;</span> cat server.<span class="keyword">key</span>.pub <span class="variable">&amp;&amp;</span> cat client1.<span class="keyword">key</span> <span class="variable">&amp;&amp;</span> cat client1.<span class="keyword">key</span>.pub</span><br></pre></td></tr></table></figure>
+#通过私钥生成公钥
+wg pubkey &lt; server.key &gt; server.key.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="6-自动创建服务器配置文件"><a href="#6-自动创建服务器配置文件" class="headerlink" title="6. 自动创建服务器配置文件"></a>6. 自动创建服务器配置文件</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">&quot;</span></span><br><span class="line">[Interface]</span><br><span class="line">PrivateKey = $(cat server.key) <span class="meta"># 填写本机的privatekey 内容</span></span><br><span class="line">Address = <span class="number">10.0</span>.<span class="number">8.1</span> <span class="meta">#本机虚拟局域网IP</span></span><br><span class="line"></span><br><span class="line">PostUp   = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</span><br><span class="line">PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE</span><br><span class="line"><span class="meta">#注意eth0需要为本机网卡名称</span></span><br><span class="line"></span><br><span class="line">ListenPort = <span class="number">50814</span> <span class="meta"># 监听端口</span></span><br><span class="line">DNS = <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">MTU = <span class="number">1420</span></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey =  $(cat client1.key.pub)  <span class="meta">#自动client1的公钥</span></span><br><span class="line">AllowedIPs = <span class="number">10.0</span>.<span class="number">8.10</span>/<span class="number">32</span> <span class="meta">#客户端所使用的IP&quot; &gt; wg0.conf</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-生成客户端-client1-秘钥"><a href="#4-生成客户端-client1-秘钥" class="headerlink" title="4. 生成客户端(client1)秘钥"></a>4. 生成客户端(client1)秘钥</h3><pre class="line-numbers language-none"><code class="language-none">#生成私钥
+wg genkey &gt; client1.key
 
-<h3 id="7-设置服务器开机自启动"><a href="#7-设置服务器开机自启动" class="headerlink" title="7. 设置服务器开机自启动"></a>7. 设置服务器开机自启动</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl</span> enable wg-quick<span class="variable">@wg0</span></span><br></pre></td></tr></table></figure>
+#通过私钥生成公钥
+wg pubkey &lt; client1.key &gt; client1.key.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="8-启动wireguard"><a href="#8-启动wireguard" class="headerlink" title="8. 启动wireguard"></a>8. 启动wireguard</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#启动wg0</span></span><br><span class="line">wg-quick up wg0</span><br><span class="line"><span class="meta">#关闭wg0</span></span><br><span class="line">wg-quick down wg0</span><br></pre></td></tr></table></figure>
+<h3 id="5-显示所有生成的秘钥"><a href="#5-显示所有生成的秘钥" class="headerlink" title="5. 显示所有生成的秘钥"></a>5. 显示所有生成的秘钥</h3><pre class="line-numbers language-none"><code class="language-none">cat server.key &amp;&amp; cat server.key.pub &amp;&amp; cat client1.key &amp;&amp; cat client1.key.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="9-wireguard客户端下载地址"><a href="#9-wireguard客户端下载地址" class="headerlink" title="9. wireguard客户端下载地址"></a>9. wireguard客户端下载地址</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.wireguard.com<span class="regexp">/install/</span></span><br></pre></td></tr></table></figure>
-<h3 id="10-客户端配置（以client1为例）"><a href="#10-客户端配置（以client1为例）" class="headerlink" title="10. 客户端配置（以client1为例）"></a>10. 客户端配置（以client1为例）</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Interface]</span></span><br><span class="line"><span class="attr">PrivateKey</span> = <span class="number">6</span>M8HEZioew+vR3i53sPc64Vg40YsuMzh4vI1Lkc88Xo= <span class="comment">#此处为client1的私钥</span></span><br><span class="line"><span class="attr">Address</span> = <span class="number">10.0</span>.<span class="number">8.10</span> <span class="comment">#此处为peer规定的客户端IP</span></span><br><span class="line"><span class="attr">MTU</span> = <span class="number">1500</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Peer]</span></span><br><span class="line"><span class="attr">PublicKey</span> = Tt5WEa0Vycf4F+TTjR2TAHDfa2onhh+tY8YOIT3cKjI= <span class="comment">#此处为server的公钥</span></span><br><span class="line"><span class="attr">AllowedIPs</span> = <span class="number">10.0</span>.<span class="number">8.0</span>/<span class="number">24</span> <span class="comment">#此处为允许的服务器IP</span></span><br><span class="line"><span class="attr">Endpoint</span> = <span class="number">114.132</span>.<span class="number">56.178</span>:<span class="number">50814</span> <span class="comment">#服务器对端IP+端口</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-自动创建服务器配置文件"><a href="#6-自动创建服务器配置文件" class="headerlink" title="6. 自动创建服务器配置文件"></a>6. 自动创建服务器配置文件</h3><pre class="line-numbers language-none"><code class="language-none">echo &quot;
+[Interface]
+PrivateKey &#x3D; $(cat server.key) # 填写本机的privatekey 内容
+Address &#x3D; 10.0.8.1 #本机虚拟局域网IP
 
-<h3 id="11-增加服务器客户端节点client2"><a href="#11-增加服务器客户端节点client2" class="headerlink" title="11. 增加服务器客户端节点client2"></a>11. 增加服务器客户端节点client2</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#生成私钥</span></span><br><span class="line">wg genkey &gt; client2.key</span><br><span class="line"></span><br><span class="line"><span class="meta">#通过私钥生成公钥</span></span><br><span class="line">wg pubkey &lt; client2.key &gt; client2.key.pub</span><br><span class="line"></span><br><span class="line"><span class="meta">#将peer公钥加入wg0.conf配置</span></span><br><span class="line">echo <span class="string">&quot;</span></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey =  $(cat client2.key.pub)  <span class="meta">#自动client1的公钥</span></span><br><span class="line">AllowedIPs = <span class="number">10.0</span>.<span class="number">8.11</span>/<span class="number">32</span> <span class="meta">#客户端Client2所使用的IP&quot; &gt;&gt; wg0.conf</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+PostUp   &#x3D; iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown &#x3D; iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+#注意eth0需要为本机网卡名称
 
-<h2 id="二、Docker安装Wireguard"><a href="#二、Docker安装Wireguard" class="headerlink" title="二、Docker安装Wireguard"></a>二、Docker安装Wireguard</h2><h3 id="1-通过容器安装wg-easy"><a href="#1-通过容器安装wg-easy" class="headerlink" title="1. 通过容器安装wg-easy"></a>1. 通过容器安装wg-easy</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">run</span> -d \</span><br><span class="line">  <span class="attribute">--name</span>=wg-easy \</span><br><span class="line">  -e <span class="attribute">WG_HOST</span>=123.123.123.123 (🚨这里输入服务器的公网IP) \</span><br><span class="line">  -e <span class="attribute">PASSWORD</span>=passwd123 (🚨这里输入你的密码) \</span><br><span class="line">  -e <span class="attribute">WG_DEFAULT_ADDRESS</span>=10.0.8.x （🚨默认IP地址）\</span><br><span class="line">  -e <span class="attribute">WG_DEFAULT_DNS</span>=114.114.114.114 （🚨默认DNS）\</span><br><span class="line">  -e <span class="attribute">WG_ALLOWED_IPS</span>=10.0.8.0/24 （🚨允许连接的IP段）\</span><br><span class="line">  -e <span class="attribute">WG_PERSISTENT_KEEPALIVE</span>=25 （🚨重连间隔）\</span><br><span class="line">  -v ~/.wg-easy:/etc/wireguard \</span><br><span class="line">  -p 51820:51820/udp \</span><br><span class="line">  -p 51821:51821/tcp \</span><br><span class="line">  <span class="attribute">--cap-add</span>=NET_ADMIN \</span><br><span class="line">  <span class="attribute">--cap-add</span>=SYS_MODULE \</span><br><span class="line">  <span class="attribute">--sysctl</span>=<span class="string">&quot;net.ipv4.conf.all.src_valid_mark=1&quot;</span> \</span><br><span class="line">  <span class="attribute">--sysctl</span>=<span class="string">&quot;net.ipv4.ip_forward=1&quot;</span> \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  weejewel/wg-easy</span><br></pre></td></tr></table></figure>
+ListenPort &#x3D; 50814 # 监听端口
+DNS &#x3D; 8.8.8.8
+MTU &#x3D; 1420
+[Peer]
+PublicKey &#x3D;  $(cat client1.key.pub)  #自动client1的公钥
+AllowedIPs &#x3D; 10.0.8.10&#x2F;32 #客户端所使用的IP&quot; &gt; wg0.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-更新容器命令"><a href="#2-更新容器命令" class="headerlink" title="2. 更新容器命令"></a>2. 更新容器命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker stop wg-easy</span><br><span class="line">docker <span class="built_in">rm</span> wg-easy</span><br><span class="line">docker pull weejewel/wg-easy</span><br></pre></td></tr></table></figure>
+<h3 id="7-设置服务器开机自启动"><a href="#7-设置服务器开机自启动" class="headerlink" title="7. 设置服务器开机自启动"></a>7. 设置服务器开机自启动</h3><pre class="line-numbers language-none"><code class="language-none">systemctl enable wg-quick@wg0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="8-启动wireguard"><a href="#8-启动wireguard" class="headerlink" title="8. 启动wireguard"></a>8. 启动wireguard</h3><pre class="line-numbers language-none"><code class="language-none">#启动wg0
+wg-quick up wg0
+#关闭wg0
+wg-quick down wg0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="9-wireguard客户端下载地址"><a href="#9-wireguard客户端下载地址" class="headerlink" title="9. wireguard客户端下载地址"></a>9. wireguard客户端下载地址</h3><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;www.wireguard.com&#x2F;install&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="10-客户端配置（以client1为例）"><a href="#10-客户端配置（以client1为例）" class="headerlink" title="10. 客户端配置（以client1为例）"></a>10. 客户端配置（以client1为例）</h3><pre class="line-numbers language-none"><code class="language-none">[Interface]
+PrivateKey &#x3D; 6M8HEZioew+vR3i53sPc64Vg40YsuMzh4vI1Lkc88Xo&#x3D; #此处为client1的私钥
+Address &#x3D; 10.0.8.10 #此处为peer规定的客户端IP
+MTU &#x3D; 1500
+
+[Peer]
+PublicKey &#x3D; Tt5WEa0Vycf4F+TTjR2TAHDfa2onhh+tY8YOIT3cKjI&#x3D; #此处为server的公钥
+AllowedIPs &#x3D; 10.0.8.0&#x2F;24 #此处为允许的服务器IP
+Endpoint &#x3D; 114.132.56.178:50814 #服务器对端IP+端口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="11-增加服务器客户端节点client2"><a href="#11-增加服务器客户端节点client2" class="headerlink" title="11. 增加服务器客户端节点client2"></a>11. 增加服务器客户端节点client2</h3><pre class="line-numbers language-none"><code class="language-none">#生成私钥
+wg genkey &gt; client2.key
+
+#通过私钥生成公钥
+wg pubkey &lt; client2.key &gt; client2.key.pub
+
+#将peer公钥加入wg0.conf配置
+echo &quot;
+[Peer]
+PublicKey &#x3D;  $(cat client2.key.pub)  #自动client1的公钥
+AllowedIPs &#x3D; 10.0.8.11&#x2F;32 #客户端Client2所使用的IP&quot; &gt;&gt; wg0.conf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、Docker安装Wireguard"><a href="#二、Docker安装Wireguard" class="headerlink" title="二、Docker安装Wireguard"></a>二、Docker安装Wireguard</h2><h3 id="1-通过容器安装wg-easy"><a href="#1-通过容器安装wg-easy" class="headerlink" title="1. 通过容器安装wg-easy"></a>1. 通过容器安装wg-easy</h3><pre class="line-numbers language-none"><code class="language-none">docker run -d \
+  --name&#x3D;wg-easy \
+  -e WG_HOST&#x3D;123.123.123.123 (🚨这里输入服务器的公网IP) \
+  -e PASSWORD&#x3D;passwd123 (🚨这里输入你的密码) \
+  -e WG_DEFAULT_ADDRESS&#x3D;10.0.8.x （🚨默认IP地址）\
+  -e WG_DEFAULT_DNS&#x3D;114.114.114.114 （🚨默认DNS）\
+  -e WG_ALLOWED_IPS&#x3D;10.0.8.0&#x2F;24 （🚨允许连接的IP段）\
+  -e WG_PERSISTENT_KEEPALIVE&#x3D;25 （🚨重连间隔）\
+  -v ~&#x2F;.wg-easy:&#x2F;etc&#x2F;wireguard \
+  -p 51820:51820&#x2F;udp \
+  -p 51821:51821&#x2F;tcp \
+  --cap-add&#x3D;NET_ADMIN \
+  --cap-add&#x3D;SYS_MODULE \
+  --sysctl&#x3D;&quot;net.ipv4.conf.all.src_valid_mark&#x3D;1&quot; \
+  --sysctl&#x3D;&quot;net.ipv4.ip_forward&#x3D;1&quot; \
+  --restart unless-stopped \
+  weejewel&#x2F;wg-easy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-更新容器命令"><a href="#2-更新容器命令" class="headerlink" title="2. 更新容器命令"></a>2. 更新容器命令</h3><pre class="line-numbers language-none"><code class="language-none">docker stop wg-easy
+docker rm wg-easy
+docker pull weejewel&#x2F;wg-easy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
     
 
     
@@ -648,10 +725,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -669,6 +742,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">

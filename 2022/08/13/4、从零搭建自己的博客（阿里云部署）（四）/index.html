@@ -278,7 +278,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.5k字</span>
+      <span class="post-count">1.6k字</span>
     </span>
   </span>
 
@@ -287,7 +287,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">5分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -312,7 +312,7 @@
 <p>选择Workbench远程连接</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208131808660.png" alt="image-20220813下午60806626"></p>
 <p>进入后输入宝塔安装指令</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -<span class="keyword">y</span> wget &amp;&amp; wget -O install.<span class="keyword">sh</span> http://download.bt.<span class="keyword">cn</span>/install/install_6.<span class="number">0</span>.<span class="keyword">sh</span> &amp;&amp; <span class="keyword">sh</span> install.<span class="keyword">sh</span> ed8484bec</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install_6.0.sh &amp;&amp; sh install.sh ed8484bec<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>期间会让你选择是否安装，输入y即可。</p>
 <p>等待一会~~</p>
@@ -336,104 +336,116 @@
 <hr>
 <h2 id="本地端设置"><a href="#本地端设置" class="headerlink" title="本地端设置"></a>本地端设置</h2><p>###配置SSH密钥</p>
 <p>为了使本地可以跟远程的 github 建立联系，需要在本地配置 SSH 密钥，这样我们就可以在本地直接提交代码到 GitHub 上或者远端 git 仓库。<br>如果你是第一次配置 SSH，则配置一下 git 的 username 和 email</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.name</span> <span class="string">&quot;GitHub名字&quot;</span></span><br><span class="line">git config <span class="attr">--global</span> user<span class="selector-class">.email</span> <span class="string">&quot;GitHub邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;GitHub名字&quot;
+git config --global user.email &quot;GitHub邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>然后生成SSH密钥：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">&quot;GitHub邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;GitHub邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如果不需要设置密码的话，第一个填写任意一个文件名，后面连续两个回车就好了。<code>你的文件名</code>和<code> 你的文件名.pub</code>。后者是公钥，后面需要使用，前者是私钥，要自己保存好。</p>
 <hr>
 <h3 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 _config.yml 文件</h3><p>在blog的文件夹下找到 _config.yml 文件</p>
 <p>找到 deploy 做以下配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: root@这里改为服务器公网IP:/home/git/blog.git</span><br><span class="line">branch: master</span><br><span class="line">massage: </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-纯文本" data-language="纯文本"><code class="language-纯文本">deploy:
+type: git
+repo: root@这里改为服务器公网IP:&#x2F;home&#x2F;git&#x2F;blog.git
+branch: master
+massage: <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h2 id="服务器端设置"><a href="#服务器端设置" class="headerlink" title="服务器端设置"></a>服务器端设置</h2><p>服务器端设置比本地设置稍微复杂一些，经常出错，本人弄了三四次才完成。宝塔的可视化对新手比较友好。</p>
 <h3 id="安装node和Nginx"><a href="#安装node和Nginx" class="headerlink" title="安装node和Nginx"></a>安装node和Nginx</h3><p>在宝塔左侧的<code>软件商店</code>中，下载安装nginx和node。</p>
 <p>然后打开宝塔SSH终端连接服务器，检查一下是否安装成功</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">node -v
+npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>如图是安装成功。</p>
 <img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132247327.png" alt="image-20220813下午104729275" style="zoom:50%;" />
 
 <hr>
 <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>打开 SSH 终端安装 git</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-纯文本" data-language="纯文本"><code class="language-纯文本">yum install git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装完成后查看一下版本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-纯文本" data-language="纯文本"><code class="language-纯文本">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如图为安装完成：</p>
 <img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132249177.png" alt="image-20220813下午104957129" style="zoom:50%;" />
 
 <h3 id="创建git用户"><a href="#创建git用户" class="headerlink" title="创建git用户"></a>创建git用户</h3><p>创建 Git 账户并赋予权限</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser git</span><br><span class="line">chmod <span class="number">740</span> <span class="regexp">/etc/</span>sudoers</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">adduser git
+chmod 740 &#x2F;etc&#x2F;sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>编辑 <code>/etc/sudoers</code> 文件</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="regexp">/etc/</span>sudoers</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;etc&#x2F;sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>按<code>i</code>键进入编辑模式，找到<code>root ALL=(ALL) ALL</code>，在其下方加入：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git     <span class="keyword">ALL</span>=(<span class="keyword">ALL</span>)       <span class="keyword">ALL</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git     ALL&#x3D;(ALL)       ALL<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如下图：</p>
 <img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132253249.png" alt="image-20220813下午105327206" style="zoom:50%;" />
 
 <p><code>Esc</code>后<code>:wq</code>保存并退出</p>
 <p>更变<code>/etc/sudoers</code>权限</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">400</span> <span class="regexp">/etc/</span>sudoers</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">chmod 400 &#x2F;etc&#x2F;sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>设置 git 账户密码</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo passwd git</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo passwd git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>输入密码，输入的时候是看不到任何显示的，输完回车即可。</p>
 <p>切换至 <code>git 用户</code>，创建 <code>~/.ssh</code> 文件夹和 <code>~/.ssh/authorized_keys</code> 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">su git
+mkdir ~&#x2F;.ssh
+vim ~&#x2F;.ssh&#x2F;authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>同样<code>i</code>进入编辑模式，把之前本地准备的<code>密钥名字.pub</code>文件中的公钥复制进去，按<code>esc</code>后，输入<code>:wq</code>保存。**(注意!!! 最后一行要加回车)**</p>
 <p>更改权限：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">600</span> <span class="regexp">/home/gi</span>t<span class="regexp">/.ssh/</span>authorized_keys</span><br><span class="line">chmod <span class="number">700</span> <span class="regexp">/home/gi</span>t/.ssh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">chmod 600 &#x2F;home&#x2F;git&#x2F;.ssh&#x2F;authorized_keys
+chmod 700 &#x2F;home&#x2F;git&#x2F;.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>&#x3D;&#x3D;然后回到本地端，查看是否可以连接上！！！&#x3D;&#x3D;</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -v <span class="symbol">git@</span>服务器ip地址或域名</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">ssh -v git@服务器ip地址或域名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="创建网站目录"><a href="#创建网站目录" class="headerlink" title="创建网站目录"></a>创建网站目录</h3><p>打开 SSH 终端<br>获取 root权限</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">su root</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">su root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>创建网站的根目录 （ 我选择的目录是在 www&#x2F;wwwroot&#x2F;myblog ，你们可以自行更改）</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="regexp">/www/</span>wwwroot/myblog</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mkdir &#x2F;www&#x2F;wwwroot&#x2F;myblog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>给予权限</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown git:git -R <span class="regexp">/www/</span>wwwroot/myblog</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">chown git:git -R &#x2F;www&#x2F;wwwroot&#x2F;myblog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h3><p>获取 root 权限</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">su root</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">su root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>建立 git 仓库</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/home/git</span></span><br><span class="line">git init <span class="params">--bare</span> blog.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;home&#x2F;git
+git init --bare blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>修改 blog.git 权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chown</span> git:git -R blog.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">chown git:git -R blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在文件 &#x2F;home&#x2F;git&#x2F;blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim blog.git<span class="regexp">/hooks/</span>post-receive</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">vim blog.git&#x2F;hooks&#x2F;post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>按 i 键进入文件的编辑模式，在该文件中添加两行代码（将下边的代码粘贴进去)，指定 Git 的工作树（源代码）和 Git 目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash </span></span><br><span class="line">git --work-tree=/www/wwwroot/myblog --git-dir=/home/git/blog.git checkout -f</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#!&#x2F;bin&#x2F;bash 
+git --work-tree&#x3D;&#x2F;www&#x2F;wwwroot&#x2F;myblog --git-dir&#x3D;&#x2F;home&#x2F;git&#x2F;blog.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入：，然后输入wq回车）<br>修改文件权限，使得其可执行</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x <span class="regexp">/home/gi</span>t<span class="regexp">/blog.git/</span>hooks/post-receive</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">chmod +x &#x2F;home&#x2F;git&#x2F;blog.git&#x2F;hooks&#x2F;post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>OK，自动化部署完毕！</p>
 <p>如果你之前配置过 git，可能你会出现以下这种错误。</p>
 <img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132345777.png" alt="img" style="zoom: 50%;" />
 
 <p>可以看到</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Offending ECDSA key <span class="keyword">in</span> <span class="regexp">/c/</span>Users<span class="regexp">/jonty/</span>.ssh/known_hosts:<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">Offending ECDSA key in &#x2F;c&#x2F;Users&#x2F;jonty&#x2F;.ssh&#x2F;known_hosts:2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>是. ssh&#x2F;known_hosts 这个文件第二行出现冲突了。只要用笔记本打开，将这个文件的第二行删掉即可。</p>
 <p>在Mac上显示隐藏文件，<code>Command+Shift+.</code>显示，然后查看简介赋予权限进行修改。</p>
 <p>重新执行刚刚的命令</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -v <span class="symbol">git@</span>你的服务器ip</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">ssh -v git@你的服务器ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132346987.png" alt="img"></p>
 <p>这说明已经连接成功了。</p>
@@ -443,7 +455,9 @@
 <p>服务器到这里就设置完成啦！</p>
 <hr>
 <h2 id="收尾"><a href="#收尾" class="headerlink" title="收尾"></a>收尾</h2><p>然后我们进行一波hexo一键三连：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span></span><br><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo clean
+hexo g
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>再登录服务器网址进行查看，</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208132357692.png" alt="image-20220813下午115718404"></p>
@@ -776,10 +790,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -797,6 +807,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">

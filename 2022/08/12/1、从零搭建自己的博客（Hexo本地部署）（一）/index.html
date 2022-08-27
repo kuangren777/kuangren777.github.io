@@ -272,7 +272,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">551字</span>
+      <span class="post-count">564字</span>
     </span>
   </span>
 
@@ -305,28 +305,29 @@
 
 <p>安装后里面含有Node.js和npm包管理器。</p>
 <p>打开终端，切换root用户</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo su</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>查看node和npm版本</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">node -v
+npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>用npm安装cnpm（国内淘宝镜像源）（<code>-g</code>为全局安装）</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="regexp">//</span>registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>看到下面这个就算安装完成了</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121253963.png" alt="image-20220812下午125324931"></p>
 <p>查看cnpm版本</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cnpm -v</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <hr>
 <h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>然后安装hexo</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121547330.png" alt="image-20220812下午34709253"  />
 
 <p>这样就算安装完成了</p>
 <p>查看hexo版本</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo -v</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121550109.png" alt="image-20220812下午35036065"></p>
 <p>查看自己的路径<code>pwd</code></p>
@@ -335,10 +336,10 @@
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121556550.png" alt="image-20220812下午35613510"></p>
 <p>东西都是在这个目录里，做错了直接把这个凎掉重来就行</p>
 <p>然后进入这个文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myblog/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd myblog&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>接着用hexo直接生成博客</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>等待一段时间，下图这样就完成了</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121600206.png" alt="image-20220812下午40040155"></p>
@@ -347,9 +348,13 @@
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121602322.png" alt="image-20220812下午40229289"></p>
 <hr>
 <p>这里插入一些hexo常用指令</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#hexo之一键三连</span></span><br><span class="line">hexo clean	<span class="meta">#清理缓存</span></span><br><span class="line">hexo g			<span class="meta">#生成博客</span></span><br><span class="line">hexo s			<span class="meta">#启动博客，在本地http:<span class="comment">//localhost:4000/可以预览</span></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#hexo之一键三连
+hexo clean	#清理缓存
+hexo g			#生成博客
+hexo s			#启动博客，在本地http:&#x2F;&#x2F;localhost:4000&#x2F;可以预览<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">&quot;你的博客文章名&quot;</span></span><br><span class="line">hexo d			<span class="meta">#远程同步到服务器</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;
+hexo d			#远程同步到服务器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -357,26 +362,39 @@
 <p>用<code>hexo s</code>生成博客，并在<a target="_blank" rel="noopener" href="http://localhost:4000/">本地</a>可以预览</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121607173.png" alt="image-20220812下午40718128"></p>
 <p>新建博客</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">&quot;你的博客文章名&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>&#x3D;&#x3D;INFO Created: &#x2F;Users&#x2F;luomingyu&#x2F;myblog&#x2F;source&#x2F;_posts&#x2F;你的博客文章名.md&#x3D;&#x3D;</p>
 <p>进入上面的博客地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/_posts/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd source&#x2F;_posts&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><code>ls -l</code>发现里面生成了一篇文章</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121615864.png" alt="image-20220812下午41501815"></p>
 <p>打开这个文件就可以编辑，我这里直接用终端编辑</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 你的博客文章名.<span class="built_in">md</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">vim 你的博客文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><code>i</code>进入编辑，MarkDown语法</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你的博客文章名</span><br><span class="line">date: 2022-08-12 16:11:18</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section"># 大家好，这是我的第一篇博客</span></span><br><span class="line"><span class="section">## 标题</span></span><br><span class="line"><span class="section">内容</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">## 标题</span></span><br><span class="line"><span class="section">内容</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token front-matter yaml language-yaml">title: 你的博客文章名
+date: 2022-08-12 16:11:18
+tags:</span>
+<span class="token punctuation">---</span></span>
+<span class="token title important"><span class="token punctuation">#</span> 大家好，这是我的第一篇博客</span>
+<span class="token title important"><span class="token punctuation">##</span> 标题</span>
+<span class="token title important">内容
+<span class="token punctuation">---</span></span>
+<span class="token title important"><span class="token punctuation">##</span> 标题</span>
+<span class="token title important">内容
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>Esc</code>后<code>:wq</code>保存并退出</p>
 <p>退回<code>myblog</code>主目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../..</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd ..&#x2F;..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>清理，生成，发布</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span></span><br><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo s</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo clean
+hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>这时候进入<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%B0%B1%E5%87%BA%E7%8E%B0%E5%88%9A%E6%89%8D%E5%86%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://localhost:4000/就出现刚才写的博客了</a></p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121629317.png" alt="image-20220812下午42941264"></p>
@@ -700,10 +718,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -721,6 +735,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
               </li>
              
               <li class="article-tag-list-item">
