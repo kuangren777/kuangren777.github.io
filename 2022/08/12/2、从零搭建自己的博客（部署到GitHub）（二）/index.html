@@ -90,7 +90,7 @@
       
 
 
-<div class="overlay" style="background: #3299CC;"></div>
+<div class="overlay" style="background: #3299CC;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -106,7 +106,7 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://www.baidu.com" target="_blank">技术笔记</a></li>
+				<li><a href="https://www.baidu.com" target="_blank">学习笔记</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
@@ -200,7 +200,7 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://www.baidu.com">技术笔记</a></li>
+					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://www.baidu.com">学习笔记</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
@@ -288,23 +288,23 @@
 <p>然后到最下面点Create就好啦。</p>
 <h2 id="git部署插件安装"><a href="#git部署插件安装" class="headerlink" title="git部署插件安装"></a>git部署插件安装</h2><p>进入终端</p>
 <p>进入<strong>myblog</strong>文件夹</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd myblog/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myblog/</span><br></pre></td></tr></table></figure>
 
 <p>安装插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
 
 <p>这样就算装完了。</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121713927.png" alt="image-20220812下午51305885"></p>
-<h2 id="设置-config-yml"><a href="#设置-config-yml" class="headerlink" title="设置_config.yml"></a>设置_config.yml</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<h2 id="设置-config-yml"><a href="#设置-config-yml" class="headerlink" title="设置_config.yml"></a>设置_config.yml</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _<span class="built_in">config</span>.yml</span><br></pre></td></tr></table></figure>
 
 <p>到最下面找到#Deployment，按<code>i</code>输入，把下面改成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: 你的GitHub上的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span><span class="punctuation">:</span></span><br><span class="line">  <span class="attribute">type</span><span class="punctuation">:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attribute">repo</span><span class="punctuation">:</span> <span class="string">你的GitHub上的仓库地址</span></span><br><span class="line">  <span class="attribute">branch</span><span class="punctuation">:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>记住！冒号后一定要加空格！！！</strong></p>
 <p>GitHub仓库地址在这里：</p>
 <p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121720807.png" alt="image-20220812下午52024708"></p>
 <p>改完<code>Esc</code>后<code>:wq</code>，保存并退出</p>
-<h2 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
 
 <p>卡住不动就<code>Ctrl+c</code>打断重来</p>
 <hr>
@@ -640,6 +640,14 @@
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">从零搭建博客</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ssr,科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ssr</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -691,7 +699,7 @@
           
             <li class="search-li">
               <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" 
-                class="search-title" title="记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析">
+                class="search-title" title="计算机专业大学生，喜欢自己折腾，发现了什么好玩的都会更新到博客上，敬请期待~~~">
                 
                   <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
                 
@@ -748,7 +756,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Java后端开发、聚合支付、<br>公众号开发、开源爱好者、Linux<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="aboutme">计算机专业大学生，喜欢自己折腾，发现了什么好玩的都会更新到博客上，敬请期待~~~</div>
   	  	
     	</section>
     
