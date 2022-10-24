@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210162128068.png">
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210150023438.png">
 <meta property="article:published_time" content="2022-10-24T05:42:46.000Z">
-<meta property="article:modified_time" content="2022-10-24T05:53:02.000Z">
+<meta property="article:modified_time" content="2022-10-24T05:53:20.000Z">
 <meta property="article:author" content="狂人的博客">
 <meta property="article:tag" content="acm">
 <meta property="article:tag" content="python">
@@ -357,37 +357,36 @@ a <span class="token operator">=</span> <span class="token builtin">sorted</span
 <pre class="line-numbers language-text" data-language="text"><code class="language-text">>>> list(map(int,&#123;'1':2,'2':3,'3':4&#125;))
 返回值：[1, 2, 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="print-技巧"><a href="#print-技巧" class="headerlink" title="print()技巧"></a>print()技巧</h3><ol>
-<li>&#96;&#96;&#96;<br>print([“NO”, “YES”][x in s])<br>#如果x in s成立，则no，否则yes<pre class="line-numbers language-none"><code class="language-none">
-2. 
+<h3 id="print-技巧"><a href="#print-技巧" class="headerlink" title="print()技巧"></a>print()技巧</h3><p>1. </p>
+<pre class="line-numbers language-none"><code class="language-none">print([&quot;NO&quot;, &quot;YES&quot;][x in s])
+#如果x in s成立，则no，否则yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-### 列表与字典与元组
+<p>2. </p>
+<h3 id="列表与字典与元组"><a href="#列表与字典与元组" class="headerlink" title="列表与字典与元组"></a>列表与字典与元组</h3><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>列表合并成字典（记录下标）</p>
+<pre class="line-numbers language-none"><code class="language-none">dict(zip(a,b))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-#### 列表
+<p>要记录下标</p>
+<pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1,8,9,5,7]
+b&#x3D;[1,2,3,4,5]#下标序列
+ss&#x3D;&#123;&#125;#创建字典
+s&#x3D;dict(zip(b,a))#用s字典存储b和a序列，b为key，a为value
+ss&#x3D;dict((sorted(s.items(),key&#x3D;lambda x:x[1]))#对字典排序为元组，x[0]：按key排序，x[1]：按value排序。再转换为字典
 
-列表合并成字典（记录下标）
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-dict(zip(a,b))<pre class="line-numbers language-none"><code class="language-none">
-要记录下标
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-a&#x3D;[1,8,9,5,7]<br>b&#x3D;[1,2,3,4,5]#下标序列<br>ss&#x3D;{}#创建字典<br>s&#x3D;dict(zip(b,a))#用s字典存储b和a序列，b为key，a为value<br>ss&#x3D;dict((sorted(s.items(),key&#x3D;lambda x:x[1]))#对字典排序为元组，x[0]：按key排序，x[1]：按value排序。再转换为字典</li>
-</ol>
-<p>for _ in ss.keys():<br>for _ in ss.values():</p>
-<pre class="line-numbers language-none"><code class="language-none">列表解决边界问题（使用min()函数）
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>lid[min(x+1,n-1)]</p>
-<pre class="line-numbers language-none"><code class="language-none">
-#### 索引问题（a.index）
+for _ in ss.keys():
+for _ in ss.values():<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>列表解决边界问题（使用min()函数）</p>
+<pre class="line-numbers language-none"><code class="language-none">lid[min(x+1,n-1)]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-列表中返回最大，最小值的索引
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>list1 &#x3D; [1,2,3,2,1]<br>print(list1.index(max(list1)))<br>#结果：2<br>list2 &#x3D; [1,2,3,4]<br>print(list2.index(min(list2)))<br>#结果：0</p>
-<pre class="line-numbers language-none"><code class="language-none">
-#### 解包符号（*）
+<h4 id="索引问题（a-index）"><a href="#索引问题（a-index）" class="headerlink" title="索引问题（a.index）"></a>索引问题（a.index）</h4><p>列表中返回最大，最小值的索引</p>
+<pre class="line-numbers language-none"><code class="language-none">list1 &#x3D; [1,2,3,2,1]
+print(list1.index(max(list1)))
+#结果：2
+list2 &#x3D; [1,2,3,4]
+print(list2.index(min(list2)))
+#结果：0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-&#96;&#96;&#96;python
-a&#x3D;[1,2,3,2,1]
-print(*a) #1 2 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="解包符号（-）"><a href="#解包符号（-）" class="headerlink" title="解包符号（*）"></a>解包符号（*）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>a<span class="token punctuation">)</span> <span class="token comment">#1 2 3 2 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><p>对字典：</p>
 <pre class="line-numbers language-none"><code class="language-none">for _ in ss.keys():
@@ -639,18 +638,9 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
 
 <nav id="article-nav">
   
-    <a href="/2022/10/24/python%E5%85%B8%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python典题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/08/28/7%E3%80%81cent%20os%E5%AE%89%E8%A3%85docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cent os安装docker</div>
+    <a href="/2022/10/24/python%E5%85%B8%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python典题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -677,7 +667,7 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#acm%E7%AC%94%E8%AE%B0Python%E7%89%88"><span class="toc-number">1.</span> <span class="toc-text">acm笔记Python版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#input"><span class="toc-number">1.0.1.</span> <span class="toc-text">input()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2"><span class="toc-number">1.0.2.</span> <span class="toc-text">正则表达式搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">列表推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8"><span class="toc-number">1.0.4.</span> <span class="toc-text">字典{}</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setdefault%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">setdefault函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E6%8E%92%E5%BA%8F"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">字典排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map%E5%87%BD%E6%95%B0%EF%BC%88%E6%98%A0%E5%B0%84%EF%BC%89"><span class="toc-number">1.0.5.</span> <span class="toc-text">map函数（映射）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#map%E5%87%BD%E6%95%B0%E8%BF%98%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">map函数还可以用来进行类型转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#print-%E6%8A%80%E5%B7%A7"><span class="toc-number">1.0.6.</span> <span class="toc-text">print()技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.0.7.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">for</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">1.0.8.</span> <span class="toc-text">堆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.0.9.</span> <span class="toc-text">快速模板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pycharm%E9%95%BF%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.9.1.</span> <span class="toc-text">pycharm长版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.9.2.</span> <span class="toc-text">短版本</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#acm%E7%AC%94%E8%AE%B0Python%E7%89%88"><span class="toc-number">1.</span> <span class="toc-text">acm笔记Python版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#input"><span class="toc-number">1.0.1.</span> <span class="toc-text">input()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%90%9C%E7%B4%A2"><span class="toc-number">1.0.2.</span> <span class="toc-text">正则表达式搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">列表推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8"><span class="toc-number">1.0.4.</span> <span class="toc-text">字典{}</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setdefault%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">setdefault函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E6%8E%92%E5%BA%8F"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">字典排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map%E5%87%BD%E6%95%B0%EF%BC%88%E6%98%A0%E5%B0%84%EF%BC%89"><span class="toc-number">1.0.5.</span> <span class="toc-text">map函数（映射）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#map%E5%87%BD%E6%95%B0%E8%BF%98%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">map函数还可以用来进行类型转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#print-%E6%8A%80%E5%B7%A7"><span class="toc-number">1.0.6.</span> <span class="toc-text">print()技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E4%B8%8E%E5%AD%97%E5%85%B8%E4%B8%8E%E5%85%83%E7%BB%84"><span class="toc-number">1.0.7.</span> <span class="toc-text">列表与字典与元组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E9%97%AE%E9%A2%98%EF%BC%88a-index%EF%BC%89"><span class="toc-number">1.0.7.2.</span> <span class="toc-text">索引问题（a.index）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%8C%85%E7%AC%A6%E5%8F%B7%EF%BC%88-%EF%BC%89"><span class="toc-number">1.0.7.3.</span> <span class="toc-text">解包符号（*）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.0.8.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for"><span class="toc-number">1.0.8.1.</span> <span class="toc-text">for</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">1.0.9.</span> <span class="toc-text">堆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.0.10.</span> <span class="toc-text">快速模板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pycharm%E9%95%BF%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.10.1.</span> <span class="toc-text">pycharm长版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.10.2.</span> <span class="toc-text">短版本</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -847,27 +837,7 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ssr</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">cent os</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -875,11 +845,19 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+                <a href="javascript:void(0)" class="js-tag color3">cent os</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ssr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -888,6 +866,10 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wireguard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -900,6 +882,14 @@ LGMI <span class="token operator">=</span> <span class="token keyword">lambda</s
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
             
             <div class="clearfix"></div>
