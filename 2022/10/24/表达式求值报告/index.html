@@ -6,17 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>Tag: yilia-plus | 狂人的博客</title>
+  <title>实验3：算术表达式求值 | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="狂人的博客">
-<meta property="og:url" content="https://kr777.xyz/tags/yilia-plus/index.html">
+  <meta name="description" content="实验3：算术表达式求值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验3：算术表达式求值">
+<meta property="og:url" content="https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="狂人的博客">
+<meta property="og:description" content="实验3：算术表达式求值">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210241148061.png">
+<meta property="article:published_time" content="2022-10-24T05:42:46.000Z">
+<meta property="article:modified_time" content="2022-10-24T05:45:42.000Z">
 <meta property="article:author" content="狂人的博客">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210241148061.png">
   
     <link rel="alternative" href="/atom.xml" title="狂人的博客" type="application/atom+xml">
   
@@ -219,69 +227,315 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-表达式求值报告" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/08/12/3%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88yilia-plus%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%EF%BC%89%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-        <time datetime="2022-08-12T10:52:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-12</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/08/12/3%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88yilia-plus%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%EF%BC%89%EF%BC%88%E4%B8%89%EF%BC%89/" target="_blank">从零搭建自己的博客（yilia-plus主题更换）（三）</a>
   
+    <h1 class="article-title" itemprop="name">
+      实验3：算术表达式求值
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/" class="archive-article-date">
+        <time datetime="2022-10-24T05:42:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-24</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">738字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="实验3：算术表达式求值"><a href="#实验3：算术表达式求值" class="headerlink" title="实验3：算术表达式求值"></a>实验3：算术表达式求值</h1><span id="more"></span>
+<h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><p>简单的算术表达式中可能出现运算数、运算符、园括号()，从键盘输入一个表达式，实现表达式的求值，并输出结果。</p>
+<p>例子：22+15*(33-27)&#x2F;3的值为52</p>
+<h3 id="二、实验目的"><a href="#二、实验目的" class="headerlink" title="二、实验目的"></a>二、实验目的</h3><p>掌握栈的存储与操作。</p>
+<h3 id="三、实验内容及要求"><a href="#三、实验内容及要求" class="headerlink" title="三、实验内容及要求"></a>三、实验内容及要求</h3><p>1、构造栈的数据结构。</p>
+<p>2、实现栈的创建、查找、遍历、输出、入栈、出栈等基本操作。</p>
+<h3 id="四、数据结构设计及算法原理"><a href="#四、数据结构设计及算法原理" class="headerlink" title="四、数据结构设计及算法原理"></a>四、数据结构设计及算法原理</h3><p>我们在本题中两种栈：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">&#x2F;&#x2F;一种是用来存储运算符的Char栈。
+typedef struct &#123;
+    char *base;
+    char *top;
+    int stack_size;
+&#125;CharStack;&#x2F;&#x2F;操作符栈
+&#x2F;&#x2F;另一种是用来存储完整数字的栈
+typedef struct &#123;
+    double *base;
+    double *top;
+    int stack_size;
+&#125;NumStack;&#x2F;&#x2F;数字栈<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这个题目要求中，我们需要使用三个栈。不知道是否可以使用string栈，以后试验一下。</p>
+<p>他们分别是：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">CharStack Opt;&#x2F;&#x2F;定义Opt为操作符栈
+NumStack num;&#x2F;&#x2F;定义num为数字栈
+NumStack temp;&#x2F;&#x2F;定义temp为临时栈（用作接受一个完整的数字）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>我们编写了多了函数以供主程序调用：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">bool InitStack(CharStack &amp;S);&#x2F;&#x2F;构造空栈
+bool StackEmpty(CharStack S);&#x2F;&#x2F;判断是否为空栈
+bool Push(CharStack &amp;S, char e);&#x2F;&#x2F;插入栈顶元素
+bool Pop(CharStack &amp;S, char &amp;e);&#x2F;&#x2F;移除栈顶元素
+bool IsChar(char c);&#x2F;&#x2F;判断输入进来的是数字还是运算符
+char compare(char a,char b);&#x2F;&#x2F;比较和定义两个运算符的优先级
+double calculate(double left, double right, char copt);&#x2F;&#x2F;计算两个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>主函数逻辑如下图所示：</p>
+<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210241148061.png" alt="image-20221024114802951" style="zoom: 80%;" />
+
+<h3 id="五、测试数据及结果分析"><a href="#五、测试数据及结果分析" class="headerlink" title="五、测试数据及结果分析"></a>五、测试数据及结果分析</h3><p>测试1：</p>
+<pre class="line-numbers language-none"><code class="language-none">请输入表达式
+((2+3)*34)&#x2F;2-1#
+84<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>测试2：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">请输入表达式
+6*(5-2*2)#
+6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>测试3：</p>
+<pre class="line-numbers language-none"><code class="language-none">请输入表达式
+(10086&#x2F;2)+5#
+5048<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>以上结果均正确。</p>
+<h3 id="六、总结与思考"><a href="#六、总结与思考" class="headerlink" title="六、总结与思考"></a>六、总结与思考</h3><ul>
+<li><p>本次实验主要分为两个部分：</p>
+<ol>
+<li>栈结构的实现</li>
+<li>表达式求值（栈结构的运用）</li>
+</ol>
+</li>
+<li><p>所以我们先实现栈的结构，再试验栈结构编写是否正确。正确后再进行下一步操作。否则一下全部写完，难以找出问题所在。</p>
+</li>
+<li><p>我在编写程序的时候预留了调试代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">int PrintStack(NumStack S)&#123;
+    double *p &#x3D; S.base;
+    for (int i &#x3D; 1; i &lt;&#x3D; S.top - S.base; ++i) &#123;
+        cout &lt;&lt; &quot;第&quot; &lt;&lt; i &lt;&lt; &quot;个元素为：&quot; &lt;&lt; *p++ &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运用此代码可以看到栈内的所有元素，弥补了调试时无法查看全部的栈内元素。从而更容易找到自己程序编写的错误所在。</p>
+</li>
+<li><p>在主函数程序编写时，由于逻辑比较复杂，所以应该先大概画出流程图，写出伪代码，再进行程序的编写。</p>
+</li>
+</ul>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          狂人的博客
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://kr777.xyz/2022/10/24/表达式求值报告/" title="实验3：算术表达式求值" target="_blank">https://kr777.xyz/2022/10/24/表达式求值报告/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本文章原载于 <a href="https://kr777.xyz" target="_blank">狂人的博客</a>，未经本人许可，禁止搬运！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">从零搭建博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia-plus</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2022/10/24/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          实验1：复数的四则运算
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/10/24/%E9%80%9A%E8%AE%AF%E5%BD%95%E6%8A%A5%E5%91%8A/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实验2：通讯录管理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C3%EF%BC%9A%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC"><span class="toc-number">1.</span> <span class="toc-text">实验3：算术表达式求值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、实验目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、实验内容及要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%8A%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、数据结构设计及算法原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、测试数据及结果分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93%E4%B8%8E%E6%80%9D%E8%80%83"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、总结与思考</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+<div id="SOHUCS" sid="表达式求值报告" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "false#cywen7KUj",
+        conf: "false#d1a4b0eeea84d28365c0d9626efc7ba2"
+    });
+</script>
+</script>
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -322,9 +576,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
