@@ -18,7 +18,7 @@
 <meta property="og:description" content="编一个程序实现复数的四则运算。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-25T12:23:15.000Z">
-<meta property="article:modified_time" content="2022-10-24T05:57:35.000Z">
+<meta property="article:modified_time" content="2022-10-24T06:01:23.000Z">
 <meta property="article:author" content="狂人的博客">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="c++">
@@ -258,7 +258,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">689字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -267,7 +267,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -359,6 +359,74 @@ void div(complex cpl[3]);<span aria-hidden="true" class="line-numbers-rows"><spa
 <li>代码中对不同板块分成不同函数进行调用，可以提高便捷性。</li>
 <li>输出结果如不使用<code>%0.2f</code>进行规整，则会出现小数点后面有很多0的情况，不够简洁。</li>
 </ol>
+<hr>
+<p>以下为全部源码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">&#x2F;&#x2F;功能：复数的运算
+&#x2F;&#x2F;设计者：骆明宇
+&#x2F;&#x2F;版本号：20220915
+#include &lt;iostream&gt;&#x2F;&#x2F;头文件
+using namespace std;
+
+typedef struct complex&#x2F;&#x2F;定义结构体
+&#123;
+    float rp;&#x2F;&#x2F;定义实部名称
+    float ip;&#x2F;&#x2F;定义虚部名称
+&#125;complex;&#x2F;&#x2F;定义结构体名称
+
+void input(complex cpl[3]); &#x2F;&#x2F;声明输入函数
+void print(complex cpl[3]); &#x2F;&#x2F;声明输出函数
+void add(complex cpl[3]);   &#x2F;&#x2F;声明加法函数
+void sub(complex cpl[3]);   &#x2F;&#x2F;声明减法函数
+void mul(complex cpl[3]);   &#x2F;&#x2F;声明乘法函数
+void div(complex cpl[3]);   &#x2F;&#x2F;声明除法函数
+
+int main()                  &#x2F;&#x2F;主函数
+&#123;
+    complex cpl[3];         &#x2F;&#x2F;定义结构体
+    input(cpl);             &#x2F;&#x2F;输入
+    add(cpl);               &#x2F;&#x2F;调用加法函数
+    print(cpl);             &#x2F;&#x2F;调用输出函数
+    sub(cpl);               &#x2F;&#x2F;调用减法函数
+    print(cpl);             &#x2F;&#x2F;调用输出函数
+    mul(cpl);               &#x2F;&#x2F;调用乘法函数
+    print(cpl);             &#x2F;&#x2F;调用输出函数
+    div(cpl);               &#x2F;&#x2F;调用除法函数
+    print(cpl);             &#x2F;&#x2F;调用输出函数
+    return 0;
+&#125;
+
+void input(complex cpl[3])  &#x2F;&#x2F;输入函数
+&#123;
+    scanf(&quot;%f+%fi&quot;,&amp;cpl[0].rp,&amp;cpl[0].ip);&#x2F;&#x2F;输入第一个实部和虚部
+    scanf(&quot;%f+%fi&quot;,&amp;cpl[1].rp,&amp;cpl[1].ip);&#x2F;&#x2F;输入第二个实部和虚部
+&#125;
+
+void add(complex cpl[3])
+&#123;
+    cpl[2].rp &#x3D; cpl[0].rp + cpl[1].rp;&#x2F;&#x2F;实部相加
+    cpl[2].ip &#x3D; cpl[0].ip + cpl[1].ip;&#x2F;&#x2F;虚部相加
+&#125;
+void sub(complex cpl[3])
+&#123;
+    cpl[2].rp &#x3D; cpl[0].rp - cpl[1].rp;&#x2F;&#x2F;实部相减
+    cpl[2].ip &#x3D; cpl[0].ip - cpl[1].ip;&#x2F;&#x2F;虚部相减
+&#125;
+void mul(complex cpl[3])
+&#123;
+    cpl[2].rp &#x3D; cpl[0].rp * cpl[1].rp;&#x2F;&#x2F;实部相乘
+    cpl[2].ip &#x3D; cpl[0].ip * cpl[1].ip;&#x2F;&#x2F;虚部相乘
+&#125;
+void div(complex cpl[3])
+&#123;
+    cpl[2].rp &#x3D; cpl[0].rp &#x2F; cpl[1].rp;&#x2F;&#x2F;实部相除
+    cpl[2].ip &#x3D; cpl[0].ip &#x2F; cpl[1].ip;&#x2F;&#x2F;虚部相除
+&#125;
+
+void print(complex cpl[3])
+&#123;
+    printf(&quot;%0.2f+%0.2fi\n&quot;,cpl[2].rp,cpl[2].ip);&#x2F;&#x2F;输出函数
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
     
 
@@ -678,14 +746,6 @@ void div(complex cpl[3]);<span aria-hidden="true" class="line-numbers-rows"><spa
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia-plus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ssr</a>
               </li>
              
@@ -699,6 +759,14 @@ void div(complex cpl[3]);<span aria-hidden="true" class="line-numbers-rows"><spa
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cent os</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia-plus</a>
               </li>
              
               <li class="article-tag-list-item">
