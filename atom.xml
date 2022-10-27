@@ -141,9 +141,9 @@
     
     
     
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
-    
     <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
+    
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
   </entry>
   
@@ -162,9 +162,9 @@
     
     
     
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
-    
     <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
+    
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
     <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
     
@@ -189,11 +189,11 @@
     
     
     
-    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
+    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
-    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
     
     <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
@@ -214,9 +214,9 @@
     
     
     
-    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
-    
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
+    
+    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
     
     <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
