@@ -6,7 +6,7 @@
   <link href="https://kr777.xyz/atom.xml" rel="self"/>
   
   <link href="https://kr777.xyz/"/>
-  <updated>2022-10-24T06:04:22.000Z</updated>
+  <updated>2022-10-24T06:04:20.000Z</updated>
   <id>https://kr777.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python典题</title>
+    <link href="https://kr777.xyz/2022/10/24/python%E5%85%B8%E9%A2%98/"/>
+    <id>https://kr777.xyz/2022/10/24/python%E5%85%B8%E9%A2%98/</id>
+    <published>2022-10-24T05:42:46.000Z</published>
+    <updated>2022-10-24T06:04:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里面稍微记录了一些题目，留作以后参考。</p><span id="more"></span><h1 id="Python典题"><a href="#Python典题" class="headerlink" title="Python典题"></a>Python典题</h1><h2 id="B-T-primes-https-codeforces-com-problemset-problem-230-B"><a href="#B-T-primes-https-codeforces-com-problemset-problem-230-B" class="headerlink" title="[B. T-primes][https://codeforces.com/problemset/problem/230/B]"></a>[B. T-primes][<a href="https://codeforces.com/problemset/problem/230/B]">https://codeforces.com/problemset/problem/230/B]</a></h2><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210151057035.png" alt="image-20221015105718959"></p><pre class="line-numbers language-none"><code class="language-none">n &#x3D; 100000a &#x3D; [1] * ns &#x3D; set()for i in range(2, n):    if a[i]:        s.add(i * i)        for j in range(i * i, n, i):            a[j] &#x3D; 0input()for x in map(int, input().split()):    print([&quot;NO&quot;, &quot;YES&quot;][x in s])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里面稍微记录了一些题目，留作以后参考。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="acm" scheme="https://kr777.xyz/tags/acm/"/>
+    
+    <category term="python" scheme="https://kr777.xyz/tags/python/"/>
+    
+    <category term="算法" scheme="https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>acm笔记Python版</title>
@@ -58,29 +81,6 @@
     <category term="数据结构" scheme="https://kr777.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="c++" scheme="https://kr777.xyz/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python典题</title>
-    <link href="https://kr777.xyz/2022/10/24/python%E5%85%B8%E9%A2%98/"/>
-    <id>https://kr777.xyz/2022/10/24/python%E5%85%B8%E9%A2%98/</id>
-    <published>2022-10-24T05:42:46.000Z</published>
-    <updated>2022-10-24T06:04:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里面稍微记录了一些题目，留作以后参考。</p><span id="more"></span><h1 id="Python典题"><a href="#Python典题" class="headerlink" title="Python典题"></a>Python典题</h1><h2 id="B-T-primes-https-codeforces-com-problemset-problem-230-B"><a href="#B-T-primes-https-codeforces-com-problemset-problem-230-B" class="headerlink" title="[B. T-primes][https://codeforces.com/problemset/problem/230/B]"></a>[B. T-primes][<a href="https://codeforces.com/problemset/problem/230/B]">https://codeforces.com/problemset/problem/230/B]</a></h2><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210151057035.png" alt="image-20221015105718959"></p><pre class="line-numbers language-none"><code class="language-none">n &#x3D; 100000a &#x3D; [1] * ns &#x3D; set()for i in range(2, n):    if a[i]:        s.add(i * i)        for j in range(i * i, n, i):            a[j] &#x3D; 0input()for x in map(int, input().split()):    print([&quot;NO&quot;, &quot;YES&quot;][x in s])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这里面稍微记录了一些题目，留作以后参考。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="acm" scheme="https://kr777.xyz/tags/acm/"/>
-    
-    <category term="python" scheme="https://kr777.xyz/tags/python/"/>
-    
-    <category term="算法" scheme="https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -141,9 +141,9 @@
     
     
     
-    <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
-    
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
+    
+    <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
     
   </entry>
   
@@ -162,15 +162,15 @@
     
     
     
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
+    
     <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
     
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
+    <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
     
     <category term="内网穿透" scheme="https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
     <category term="wireguard" scheme="https://kr777.xyz/tags/wireguard/"/>
-    
-    <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
     
   </entry>
   
@@ -189,11 +189,11 @@
     
     
     
-    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
     
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
-    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
+    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
@@ -214,9 +214,9 @@
     
     
     
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
-    
     <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
+    
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
     <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
