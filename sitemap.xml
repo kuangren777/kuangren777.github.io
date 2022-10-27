@@ -4,7 +4,7 @@
   <url>
     <loc>https://kr777.xyz/essay/index.html</loc>
     
-    <lastmod>2022-10-25</lastmod>
+    <lastmod>2022-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -200,20 +200,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/wireguard/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/acm/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -235,7 +221,14 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/yilia-plus/</loc>
+    <loc>https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/wireguard/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -250,6 +243,13 @@
   
   <url>
     <loc>https://kr777.xyz/tags/c/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/yilia-plus/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
