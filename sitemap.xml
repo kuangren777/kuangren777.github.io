@@ -4,7 +4,7 @@
   <url>
     <loc>https://kr777.xyz/2022/10/28/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801%EF%BC%89/</loc>
     
-    <lastmod>2022-10-28</lastmod>
+    <lastmod>2022-10-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/</loc>
+    <loc>https://kr777.xyz/2022/09/25/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/2022/09/25/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/</loc>
+    <loc>https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -153,13 +153,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/yilia-plus/</loc>
-    <lastmod>2022-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/hexo/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -174,7 +167,28 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/docker/</loc>
+    <loc>https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/ssr/</loc>
+    <lastmod>2022-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2022-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/ubuntu/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -182,13 +196,6 @@
   
   <url>
     <loc>https://kr777.xyz/tags/cent-os/</loc>
-    <lastmod>2022-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -209,21 +216,7 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/ubuntu/</loc>
-    <lastmod>2022-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/ssr/</loc>
-    <lastmod>2022-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <loc>https://kr777.xyz/tags/docker/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -251,13 +244,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/C-C/</loc>
-    <lastmod>2022-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,6 +252,20 @@
   
   <url>
     <loc>https://kr777.xyz/tags/c/</loc>
+    <lastmod>2022-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/C-C/</loc>
+    <lastmod>2022-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/yilia-plus/</loc>
     <lastmod>2022-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
