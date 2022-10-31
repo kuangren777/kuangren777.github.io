@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>算法基础（排序、二分） | 狂人的博客</title>
+  <title>算法基础1 | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过&amp;#107;&amp;#x75;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x72;&amp;#101;&amp;#x6e;&amp;#x77;&amp;#101;&amp;#x62;&amp;#64;&amp;#x31;&amp;#x36;&amp;#x33;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;联系我。欢迎大家批评与指正！">
+  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法基础（排序、二分）">
+<meta property="og:title" content="算法基础1">
 <meta property="og:url" content="https://kr777.xyz/2022/10/28/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801%EF%BC%89/index.html">
 <meta property="og:site_name" content="狂人的博客">
-<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过&amp;#107;&amp;#x75;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x72;&amp;#101;&amp;#x6e;&amp;#x77;&amp;#101;&amp;#x62;&amp;#64;&amp;#x31;&amp;#x36;&amp;#x33;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;联系我。欢迎大家批评与指正！">
+<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280834474.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280954025.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210301403631.gif">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210302130170.png">
 <meta property="article:published_time" content="2022-10-28T08:02:23.000Z">
-<meta property="article:modified_time" content="2022-10-29T16:21:46.000Z">
+<meta property="article:modified_time" content="2022-10-31T03:33:25.000Z">
 <meta property="article:author" content="狂人的博客">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="算法">
@@ -280,7 +281,7 @@ var _hmt = _hmt || [];
   
   
     <h1 class="article-title" itemprop="name">
-      算法基础（排序、二分）
+      算法基础1
     </h1>
   
 
@@ -306,7 +307,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.1k字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -315,7 +316,7 @@ var _hmt = _hmt || [];
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">5分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -326,7 +327,7 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:&#107;&#x75;&#x61;&#x6e;&#x67;&#x72;&#101;&#x6e;&#x77;&#101;&#x62;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#107;&#x75;&#x61;&#x6e;&#x67;&#x72;&#101;&#x6e;&#x77;&#101;&#x62;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a>联系我。欢迎大家批评与指正！</p>
+    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:kuangrenweb@163.com">kuangrenweb@163.com</a>联系我。欢迎大家批评与指正！</p>
 <span id="more"></span>
 
 <h1 id="第一课时"><a href="#第一课时" class="headerlink" title="第一课时"></a>第一课时</h1><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>两个排序</p>
@@ -369,26 +370,71 @@ var _hmt = _hmt || [];
 <li>如果左边指针大于中间数，则停下来，等到右边指针小于中间数，交换位置。</li>
 <li>直到相遇为止。</li>
 </ol>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210301403631.gif" alt="2.gif"></p>
 <p>快排模板：</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280954025.png" alt="image-20221028095423954"></p>
-<hr>
-<p>网上的快排：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">if</span> left <span class="token operator">>=</span> right<span class="token punctuation">:</span>
+<p>c++：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;iostream&gt;
+
+using namespace std;
+
+const int N &#x3D; 1000010;
+
+int q[N];
+
+void quick_sort(int q[], int l, int r)
+&#123;
+    if (l &gt;&#x3D; r) return;
+
+    int i &#x3D; l - 1, j &#x3D; r + 1, x &#x3D; q[l + r &gt;&gt; 1];
+    while (i &lt; j)
+    &#123;
+        do i ++ ; while (q[i] &lt; x);
+        do j -- ; while (q[j] &gt; x);
+        if (i &lt; j) swap(q[i], q[j]);
+    &#125;
+
+    quick_sort(q, l, j);
+    quick_sort(q, j + 1, r);
+&#125;
+
+int main()
+&#123;
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+
+    for (int i &#x3D; 0; i &lt; n; i ++ ) scanf(&quot;%d&quot;, &amp;q[i]);
+
+    quick_sort(q, 0, n - 1);
+
+    for (int i &#x3D; 0; i &lt; n; i ++ ) printf(&quot;%d &quot;, q[i]);
+
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我的快排：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> l <span class="token operator">></span> r<span class="token punctuation">:</span>
         <span class="token keyword">return</span>
-    low <span class="token operator">=</span> left
-    high <span class="token operator">=</span> right
-    key <span class="token operator">=</span> array<span class="token punctuation">[</span>low<span class="token punctuation">]</span>
-    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> array<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">></span> key<span class="token punctuation">:</span>
-            right <span class="token operator">-=</span> <span class="token number">1</span>
-        array<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> array<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> key<span class="token punctuation">:</span>
-            left <span class="token operator">+=</span> <span class="token number">1</span>
-        array<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
-    array<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> key
-    quick_sort<span class="token punctuation">(</span>array<span class="token punctuation">,</span> low<span class="token punctuation">,</span> left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    quick_sort<span class="token punctuation">(</span>array<span class="token punctuation">,</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    i <span class="token operator">=</span> l
+    j <span class="token operator">=</span> r
+    key <span class="token operator">=</span> q<span class="token punctuation">[</span><span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> l <span class="token operator">&lt;=</span> r<span class="token punctuation">:</span>
+        <span class="token keyword">while</span> l <span class="token operator">&lt;=</span> r <span class="token keyword">and</span> q<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">&lt;</span> key<span class="token punctuation">:</span>
+            l <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> l <span class="token operator">&lt;=</span> r <span class="token keyword">and</span> q<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">></span> key<span class="token punctuation">:</span>
+            r <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">if</span> l <span class="token operator">&lt;=</span> r<span class="token punctuation">:</span>
+            q<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token punctuation">[</span>l<span class="token punctuation">]</span>
+            r <span class="token operator">-=</span> <span class="token number">1</span>
+            l <span class="token operator">+=</span> <span class="token number">1</span>
+    quick_sort<span class="token punctuation">(</span>q<span class="token punctuation">,</span> i<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+    quick_sort<span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> j<span class="token punctuation">)</span>
+
+
+n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+q <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+quick_sort<span class="token punctuation">(</span>q<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>q<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>《算法导论》中的快排：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -406,25 +452,7 @@ var _hmt = _hmt || [];
       array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
   array<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> array<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">,</span> array<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span>
   <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>我的快排：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">if</span> l <span class="token operator">>=</span> r<span class="token punctuation">:</span><span class="token comment">#l和r是两个指针</span>
-        <span class="token keyword">return</span>
-    i <span class="token operator">=</span> l<span class="token comment">#保存l的值</span>
-    j <span class="token operator">=</span> r<span class="token comment">#保存r的值用作后面</span>
-    key <span class="token operator">=</span> q<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token comment">#使用每次的头一个值做为key关键值</span>
-    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
-        <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r <span class="token keyword">and</span> q<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">>=</span> key<span class="token punctuation">:</span><span class="token comment">#从右边向左扫，要求比key大，不大则退出，交换</span>
-            r <span class="token operator">-=</span> <span class="token number">1</span><span class="token comment">#指针向左移</span>
-        q<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token comment">#第一次，覆盖key值，后面几次覆盖上一次的值</span>
-        <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r <span class="token keyword">and</span> q<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">&lt;</span> key<span class="token punctuation">:</span><span class="token comment">#从左向右扫，要求比key小，不小则退出，交换</span>
-            l <span class="token operator">+=</span> <span class="token number">1</span><span class="token comment">#指正向右移</span>
-        q<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token comment">#覆盖上一次的值</span>
-    q<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">=</span> key<span class="token comment">#再把key值覆盖</span>
-    quick_sort<span class="token punctuation">(</span>q<span class="token punctuation">,</span> i<span class="token punctuation">,</span> l <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">#保存下来的值用作边界</span>
-    quick_sort<span class="token punctuation">(</span>q<span class="token punctuation">,</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token comment">#保存下来的值用作边界</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<hr>
 <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ol>
 <li>确定分界点：mid&#x3D;(l+r)&#x2F;2</li>
 <li>递归排序：left+right</li>
@@ -494,7 +522,7 @@ mergeSort<span class="token punctuation">(</span>arr<span class="token punctuati
 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d"</span> <span class="token operator">%</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h2><h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p><strong>二分的本质：边界</strong></p>
+<h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p><strong>二分的本质：边界</strong></p>
 <p>如果有单调性，一定可以二分。</p>
 <p>可以二分的题目不一定一定要有单调性。</p>
 <p><strong>本质：</strong></p>
@@ -528,6 +556,41 @@ mergeSort<span class="token punctuation">(</span>arr<span class="token punctuati
     return l;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>我的模板：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token punctuation">,</span> q <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    x <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> x <span class="token keyword">not</span> <span class="token keyword">in</span> c<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"-1 -1"</span><span class="token punctuation">)</span>
+        <span class="token keyword">continue</span>
+        
+    <span class="token comment">#向左靠</span>
+    l <span class="token operator">=</span> <span class="token number">0</span>
+    r <span class="token operator">=</span> a <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">if</span> x <span class="token operator">&lt;=</span> c<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token comment">#要带等号</span>
+            r <span class="token operator">=</span> mid
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token comment">#不在左边，右边就要加上1</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">#向右靠</span>
+    l <span class="token operator">=</span> <span class="token number">0</span>
+    r <span class="token operator">=</span> a <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span> <span class="token comment">#注意这里要加上1</span>
+        <span class="token keyword">if</span> x <span class="token operator">>=</span> c<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token comment">#要带等号</span>
+            l <span class="token operator">=</span> mid
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            r <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token comment">#不在右边，左边就要减去1</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210302130170.png" alt="image-20221030213046785"></p>
 <h3 id="浮点数二分"><a href="#浮点数二分" class="headerlink" title="浮点数二分"></a>浮点数二分</h3><p>当l-r足够小，则可以认为是同一个数。</p>
  <pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 l <span class="token operator">=</span> <span class="token number">0</span>
@@ -554,7 +617,7 @@ r <span class="token operator">=</span> x
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://kr777.xyz/2022/10/28/第一章（算法基础1）/" title="算法基础（排序、二分）" target="_blank">https://kr777.xyz/2022/10/28/第一章（算法基础1）/</a>
+          <a href="https://kr777.xyz/2022/10/28/第一章（算法基础1）/" title="算法基础1" target="_blank">https://kr777.xyz/2022/10/28/第一章（算法基础1）/</a>
         </li>
         
         <li>
@@ -655,9 +718,18 @@ r <span class="token operator">=</span> x
 
 <nav id="article-nav">
   
+    <a href="/2022/10/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数据结构笔记（树、堆）
+        
+      </div>
+    </a>
   
-    <a href="/2022/10/24/python%E5%85%B8%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python典题</div>
+  
+    <a href="/2022/10/24/acm%E7%AC%94%E8%AE%B0Python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">acm笔记Python版</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -684,7 +756,7 @@ r <span class="token operator">=</span> x
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text">第一课时</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">归并排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86"><span class="toc-number">1.2.</span> <span class="toc-text">二分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">整数二分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">浮点数二分</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text">第一课时</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">整数二分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.1.4.</span> <span class="toc-text">浮点数二分</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -850,11 +922,15 @@ r <span class="token operator">=</span> x
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">云服务器</a>
+                <a href="javascript:void(0)" class="js-tag color1">yilia-plus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -862,15 +938,11 @@ r <span class="token operator">=</span> x
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">cent os</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -883,6 +955,10 @@ r <span class="token operator">=</span> x
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -907,10 +983,6 @@ r <span class="token operator">=</span> x
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia-plus</a>
               </li>
             
             <div class="clearfix"></div>

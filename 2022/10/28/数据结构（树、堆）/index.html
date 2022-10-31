@@ -6,23 +6,70 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>实验1：复数的四则运算（附源码） | 狂人的博客</title>
+  <title>数据结构笔记（树、堆） | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="编一个程序实现复数的四则运算。">
+  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实验1：复数的四则运算（附源码）">
-<meta property="og:url" content="https://kr777.xyz/2022/09/25/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:title" content="数据结构笔记（树、堆）">
+<meta property="og:url" content="https://kr777.xyz/2022/10/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89/index.html">
 <meta property="og:site_name" content="狂人的博客">
-<meta property="og:description" content="编一个程序实现复数的四则运算。">
+<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-25T12:23:15.000Z">
-<meta property="article:modified_time" content="2022-10-24T06:04:26.000Z">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271131163.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271135718.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271137200.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271139409.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271146251.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271921386.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272112479.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272115158.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272117428.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272121704.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272212605.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272213881.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272214726.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272215881.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272216211.png">
+<meta property="og:image" content="https://kr777.xyz/AppData/Roaming/Typora/typora-user-images/image-20221027221856834.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272220111.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272232518.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272241008.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272353822.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272357728.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280007727.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280008336.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280009620.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280011121.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280011192.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280014523.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280020477.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280021795.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280029929.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280033900.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280034399.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280035111.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280041078.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280041980.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280043608.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280050456.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280050789.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280051948.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310837665.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310839723.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310851249.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310852481.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310856064.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310903520.png">
+<meta property="article:published_time" content="2022-10-28T08:02:23.000Z">
+<meta property="article:modified_time" content="2022-10-31T03:35:03.000Z">
 <meta property="article:author" content="狂人的博客">
+<meta property="article:tag" content="算法">
 <meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="c++">
+<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271131163.png">
   
     <link rel="alternative" href="/atom.xml" title="狂人的博客" type="application/atom+xml">
   
@@ -269,14 +316,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-复数的四则运算" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据结构（树、堆）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      实验1：复数的四则运算（附源码）
+      数据结构笔记（树、堆）
     </h1>
   
 
@@ -288,8 +335,8 @@ var _hmt = _hmt || [];
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/09/25/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" class="archive-article-date">
-        <time datetime="2022-09-25T12:23:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-25</time>
+<a href="/2022/10/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89/" class="archive-article-date">
+        <time datetime="2022-10-28T08:02:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-28</time>
 </a>
 
   
@@ -302,7 +349,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.2k字</span>
+      <span class="post-count">1.1k字</span>
     </span>
   </span>
 
@@ -311,7 +358,7 @@ var _hmt = _hmt || [];
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">5分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -322,155 +369,161 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>编一个程序实现复数的四则运算。</p>
+    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:kuangrenweb@163.com">kuangrenweb@163.com</a>联系我。欢迎大家批评与指正！</p>
 <span id="more"></span>
 
-<h2 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h2><p>编一个程序实现复数的四则运算。</p>
-<h2 id="二、实验目的"><a href="#二、实验目的" class="headerlink" title="二、实验目的"></a>二、实验目的</h2><p>掌握数据结构的基本概念，学会数据的组织方法，以便选择合适的数据逻辑结构和存储结构，以及相应的运算，把现实世界中的问题转化为计算机内部的表示和处理。</p>
-<h2 id="三、实验内容及要求"><a href="#三、实验内容及要求" class="headerlink" title="三、实验内容及要求"></a>三、实验内容及要求</h2><p>1、定义复数类型，构造其数据结构。</p>
-<p>2、实现复数的加、减、乘、除四则运算。</p>
-<h2 id="四、数据结构设计及算法原理"><a href="#四、数据结构设计及算法原理" class="headerlink" title="四、数据结构设计及算法原理"></a>四、数据结构设计及算法原理</h2><p>先定义数据结构</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">typedef struct complex
-&#123;
-    float rp;
-    float ip;
-&#125;complex;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>结构名为</p>
-<p>complex，结构下有虚数的实部（rp）和虚部（ip）。<br>定义函数，传入名为cpl的三位数组。</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void input(complex cpl[3]);
-void print(complex cpl[3]);
-void add(complex cpl[3]);
-void sub(complex cpl[3]);
-void mul(complex cpl[3]);
-void div(complex cpl[3]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>以上分别是输入、输出、加减乘除。</p>
-<p>输入函数为：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void input(complex cpl[3])
-&#123;
-    scanf(&quot;%f+%fi&quot;,&amp;cpl[0].rp,&amp;cpl[0].ip);
-    scanf(&quot;%f+%fi&quot;,&amp;cpl[1].rp,&amp;cpl[1].ip);
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>用C语言中的scanf，可以从特定的输入格式中直接提取想要的数字。再分别保存入0号cpl和1号cpl对应的实部和虚部当中。</p>
-<p>加法函数为：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void add(complex cpl[3])
-&#123;
-    cpl[2].rp &#x3D; cpl[0].rp + cpl[1].rp;
-    cpl[2].ip &#x3D; cpl[0].ip + cpl[1].ip;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>实部虚部分别相加到2号cpl中，减法乘法除法同理。</p>
-<p>输出函数为：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void print(complex cpl[3])
-&#123;
-    printf(&quot;%0.2f+%0.2fi\n&quot;,cpl[2].rp,cpl[2].ip);
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>输出2号cpl中的实部和虚部。利用<code>%0.2f</code>限制输出小数位数。</p>
-<h2 id="五、测试数据及结果分析"><a href="#五、测试数据及结果分析" class="headerlink" title="五、测试数据及结果分析"></a>五、测试数据及结果分析</h2><pre class="line-numbers language-none"><code class="language-none">输入1：
-15+10i
-2+3i
-输出1：
-17.00+13.00i
-13.00+7.00i
-30.00+30.00i
-7.50+3.33i
+<h1 id="数据结构笔记（树、堆）"><a href="#数据结构笔记（树、堆）" class="headerlink" title="数据结构笔记（树、堆）"></a>数据结构笔记（树、堆）</h1><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><h4 id="1-先序遍历"><a href="#1-先序遍历" class="headerlink" title="1. 先序遍历"></a>1. 先序遍历</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271131163.png" alt="image-20221027113125876"></p>
+<h4 id="2-中序遍历"><a href="#2-中序遍历" class="headerlink" title="2. 中序遍历"></a>2. 中序遍历</h4><p>仅仅更改print的位置</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271135718.png" alt="image-20221027113525460"></p>
+<h4 id="3-后序遍历"><a href="#3-后序遍历" class="headerlink" title="3. 后序遍历"></a>3. 后序遍历</h4><p>仅仅更改print的位置</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271137200.png" alt="image-20221027113726924"></p>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271139409.png" alt="image-20221027113921128"></p>
+<p>每个节点都能碰到三次，在第一次碰到的时候就输出，叫做前序遍历。</p>
+<p>第二次碰到的时候输出是中序遍历，第三次碰到的时候输出是后续遍历。</p>
+<h4 id="5-中序遍历的非递归算法（堆栈）"><a href="#5-中序遍历的非递归算法（堆栈）" class="headerlink" title="5. 中序遍历的非递归算法（堆栈）"></a>5. 中序遍历的非递归算法（堆栈）</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271146251.png" alt="image-20221027114638821"></p>
+<h4 id="6-先序遍历的非递归算法"><a href="#6-先序遍历的非递归算法" class="headerlink" title="6. 先序遍历的非递归算法"></a>6. 先序遍历的非递归算法</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">InOrderTraversal</span><span class="token punctuation">(</span>BinTree BT<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    BinTree T<span class="token operator">=</span>BT<span class="token punctuation">;</span>
+    Stack S <span class="token operator">=</span> <span class="token function">CreatStack</span><span class="token punctuation">(</span> MaxSize <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span> T <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">IsEmpty</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%5d"</span><span class="token punctuation">,</span> T<span class="token operator">-></span>Data<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//前序遍历，遇到第一次就输出</span>
+            <span class="token function">Push</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> T<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            T <span class="token operator">=</span> T<span class="token operator">-></span>Left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">IsEmpty</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            T <span class="token operator">=</span> <span class="token function">Pop</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            T <span class="token operator">=</span> T<span class="token operator">-></span>Right<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-输入2：
-3+5i
-12+2i
-输出2：
-15.00+7.00i
--9.00+3.00i
-36.00+10.00i
-0.25+2.50i
+<h4 id="7-后序遍历的非递归算法"><a href="#7-后序遍历的非递归算法" class="headerlink" title="7. 后序遍历的非递归算法"></a>7. 后序遍历的非递归算法</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">InOrderTraversal</span><span class="token punctuation">(</span>BinTree BT<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    BinTree T<span class="token operator">=</span>BT<span class="token punctuation">;</span>
+    Stack S <span class="token operator">=</span> <span class="token function">CreatStack</span><span class="token punctuation">(</span> MaxSize <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span> T <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">IsEmpty</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token function">Push</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span> T<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            T <span class="token operator">=</span> T<span class="token operator">-></span>Left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">IsEmpty</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            T <span class="token operator">=</span> <span class="token function">Pop</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            T <span class="token operator">=</span> T<span class="token operator">-></span>Right<span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%5d"</span><span class="token punctuation">,</span> T<span class="token operator">-></span>Data<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//后序遍历，遇到最后一次再输出</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-输入3：
-6+1i
-17+3i
-输出3：
-23.00+4.00i
--11.00+-2.00i
-102.00+3.00i
-0.35+0.33i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>结论：</p>
+<h4 id="8-层序遍历"><a href="#8-层序遍历" class="headerlink" title="8. 层序遍历"></a>8. 层序遍历</h4><p>二维结构的线性化。</p>
 <ul>
-<li>结果基本正确。</li>
-<li>当实部和虚部为整数时，<code>.00</code>后缀不美观。</li>
-<li>当虚部为负数时，会出现<code>+-</code>，不严谨。</li>
+<li>用堆栈结构保存暂时不访问的节点</li>
+<li>存储结构：堆栈、队列</li>
+<li>队列实现：遍历从根结点开始，首先将根结点入队，然后开始执行循环：结点出队、访问该结点、其左右儿子入队。</li>
 </ul>
-<h2 id="六、总结与思考"><a href="#六、总结与思考" class="headerlink" title="六、总结与思考"></a>六、总结与思考</h2><p>在这个问题中</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210271921386.png" alt="image-20221027192136037"></p>
+<h5 id="1-例题"><a href="#1-例题" class="headerlink" title="1 例题"></a>1 例题</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272112479.png" alt="image-20221027211258236"></p>
+<p>求叶子结点可以直接在前序遍历的基础上检测节点“左右子树是否为空”。</p>
+<h5 id="2-例题"><a href="#2-例题" class="headerlink" title="2 例题"></a>2 例题</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272115158.png" alt="image-20221027211512872"></p>
+<p>在后序遍历的基础上，取左右子树的最高高度，而后再加1。</p>
+<h5 id="3-例题"><a href="#3-例题" class="headerlink" title="3 例题"></a>3 例题</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272117428.png" alt="image-20221027211752163"></p>
+<h5 id="4-例题"><a href="#4-例题" class="headerlink" title="4 例题"></a>4 例题</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272121704.png" alt="image-20221027212112519"></p>
+<h3 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h3><h4 id="1-查找"><a href="#1-查找" class="headerlink" title="1. 查找"></a>1. 查找</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272212605.png" alt="image-20221027221206282"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272213881.png" alt="image-20221027221316577"></p>
+<p>以上其实为尾递归，尾递归可以使用循环来表示。</p>
+<p>以下为循环算法：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272214726.png" alt="image-20221027221409450"></p>
+<p><strong>查找的效率决定于数的高度。</strong></p>
+<h5 id="1-最大最小元素"><a href="#1-最大最小元素" class="headerlink" title="1 最大最小元素"></a>1 最大最小元素</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272215881.png" alt="image-20221027221552666"></p>
+<p>代码实现：分别用递归和循环实现</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272216211.png" alt="image-20221027221646914"></p>
+<h4 id="2-插入"><a href="#2-插入" class="headerlink" title="2. 插入"></a>2. 插入</h4><p><img src="/../../../AppData/Roaming/Typora/typora-user-images/image-20221027221856834.png" alt="image-20221027221856834"></p>
+<p>算法实现：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272220111.png" alt="image-20221027222005824"></p>
+<p>以上是当BST到达最后一个被搜索的节点后，BST-&gt;Right为空，给新创建的节点分配空间，并返回接上去的地方给上一层的BST-&gt;Right。</p>
+<h5 id="1-例题-1"><a href="#1-例题-1" class="headerlink" title="1 例题"></a>1 例题</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272232518.png" alt="image-20221027223228269"></p>
+<p>按照字典序比较大小。</p>
+<h4 id="3-删除"><a href="#3-删除" class="headerlink" title="3. 删除"></a>3. 删除</h4><p>3种情况：</p>
+<ul>
+<li>叶子结点</li>
+<li>只有一个儿子</li>
+<li>有左右两个儿子</li>
+</ul>
+<h5 id="3-1-叶子结点"><a href="#3-1-叶子结点" class="headerlink" title="3.1 叶子结点"></a>3.1 叶子结点</h5><p>直接删除 ，并修改父节点指针为NULL</p>
+<h5 id="3-2-只有一个儿子"><a href="#3-2-只有一个儿子" class="headerlink" title="3.2 只有一个儿子"></a>3.2 只有一个儿子</h5><p>删除，并把儿子放到老子位置上。（上级父节点直接指向儿子结点）。</p>
+<h5 id="3-3-有两个儿子"><a href="#3-3-有两个儿子" class="headerlink" title="3.3 有两个儿子"></a>3.3 有两个儿子</h5><p>删除，并在左边孩子里找最大的，或者在右边孩子里找最小的来替代他。</p>
+<p>因为左子树最大值和有子树最小值一定只有唯一一个儿子或者没有儿子。</p>
+<h5 id="程序实现："><a href="#程序实现：" class="headerlink" title="程序实现："></a>程序实现：</h5><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272241008.png" alt="image-20221027224134601"></p>
+<h3 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h3><p>不同的插入顺序会导致不同的树的样子。</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272353822.png" alt="image-20221027235309474"></p>
+<p><strong>平衡因子</strong></p>
+<p>BF(T)&#x3D;h<del>L</del>-h<del>R</del>即左右子树高度</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210272357728.png" alt="image-20221027235735653"></p>
+<ul>
+<li>给定结点数为n的AVL树的最大高度为O(log<del>2</del>n)!</li>
+</ul>
+<h4 id="平衡二叉树的调整"><a href="#平衡二叉树的调整" class="headerlink" title="平衡二叉树的调整"></a>平衡二叉树的调整</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280007727.png" alt="image-20221028000700547"></p>
+<ul>
+<li>RR旋转：不平衡的“发现者”是Mar,“麻烦结点”Nov在发现者右子树的右边，因而叫RR插入，需要RR旋转（右单旋）</li>
+</ul>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280008336.png" alt="image-20221028000845179"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280009620.png" alt="image-20221028000936343"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280011121.png" alt="image-20221028001101931"></p>
+<ul>
+<li>LR旋转：</li>
+</ul>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280011192.png" alt="image-20221028001155755"></p>
+<ul>
+<li>RL旋转</li>
+</ul>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280014523.png" alt="image-20221028001410093"></p>
+<h4 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h4><p><strong>求给定序列的搜索树是否为同一个二叉搜索树：</strong></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280020477.png" alt="image-20221028002044102"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280021795.png" alt="image-20221028002105672"></p>
+<p>以3为思路：</p>
 <ol>
-<li>首先分析需要的数据结构，为一个大的类型下分有两个浮点型（实部和虚部）。</li>
-<li>再分析需求，题目要求对虚数加减乘除，即对实部和虚部分别相加减乘除。</li>
-<li>代码中对不同板块分成不同函数进行调用，可以提高便捷性。</li>
-<li>输出结果如不使用<code>%0.2f</code>进行规整，则会出现小数点后面有很多0的情况，不够简洁。</li>
+<li>搜索树的表示</li>
+<li>建搜索树</li>
+<li>判别一个序列是否和搜索树一致</li>
 </ol>
-<hr>
-<p>以下为全部源码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">&#x2F;&#x2F;功能：复数的运算
-&#x2F;&#x2F;设计者：骆明宇
-&#x2F;&#x2F;版本号：20220915
-#include &lt;iostream&gt;&#x2F;&#x2F;头文件
-using namespace std;
+<p>搜索树的表示：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">typedef struct TreeNode *Tree;
+struct TreeNode&#123;
+    int v;
+    Tree Left, Right;
+    int flag;&#x2F;&#x2F;判别是否有被访问过的标记
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-typedef struct complex&#x2F;&#x2F;定义结构体
-&#123;
-    float rp;&#x2F;&#x2F;定义实部名称
-    float ip;&#x2F;&#x2F;定义虚部名称
-&#125;complex;&#x2F;&#x2F;定义结构体名称
+<p>程序实现：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280029929.png" alt="image-20221028002936605"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280033900.png" alt="image-20221028003330490"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280034399.png" alt="image-20221028003442092"></p>
+<p><strong>如何判别：</strong></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280035111.png" alt="image-20221028003442092"></p>
+<p>有bug：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280041078.png" alt="image-20221028004109820"></p>
+<p>改写后：<strong>（注意：T-&gt;flag和flag不同）</strong></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280041980.png" alt="image-20221028004148754"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280043608.png" alt="image-20221028004337414"></p>
+<h3 id="单链表的逆转"><a href="#单链表的逆转" class="headerlink" title="单链表的逆转"></a>单链表的逆转</h3><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280050456.png" alt="image-20221028005025376"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280050789.png" alt="image-20221028005000529"></p>
+<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210280051948.png" alt="image-20221028005154864" style="zoom: 50%;" />
 
-void input(complex cpl[3]); &#x2F;&#x2F;声明输入函数
-void print(complex cpl[3]); &#x2F;&#x2F;声明输出函数
-void add(complex cpl[3]);   &#x2F;&#x2F;声明加法函数
-void sub(complex cpl[3]);   &#x2F;&#x2F;声明减法函数
-void mul(complex cpl[3]);   &#x2F;&#x2F;声明乘法函数
-void div(complex cpl[3]);   &#x2F;&#x2F;声明除法函数
-
-int main()                  &#x2F;&#x2F;主函数
-&#123;
-    complex cpl[3];         &#x2F;&#x2F;定义结构体
-    input(cpl);             &#x2F;&#x2F;输入
-    add(cpl);               &#x2F;&#x2F;调用加法函数
-    print(cpl);             &#x2F;&#x2F;调用输出函数
-    sub(cpl);               &#x2F;&#x2F;调用减法函数
-    print(cpl);             &#x2F;&#x2F;调用输出函数
-    mul(cpl);               &#x2F;&#x2F;调用乘法函数
-    print(cpl);             &#x2F;&#x2F;调用输出函数
-    div(cpl);               &#x2F;&#x2F;调用除法函数
-    print(cpl);             &#x2F;&#x2F;调用输出函数
-    return 0;
-&#125;
-
-void input(complex cpl[3])  &#x2F;&#x2F;输入函数
-&#123;
-    scanf(&quot;%f+%fi&quot;,&amp;cpl[0].rp,&amp;cpl[0].ip);&#x2F;&#x2F;输入第一个实部和虚部
-    scanf(&quot;%f+%fi&quot;,&amp;cpl[1].rp,&amp;cpl[1].ip);&#x2F;&#x2F;输入第二个实部和虚部
-&#125;
-
-void add(complex cpl[3])
-&#123;
-    cpl[2].rp &#x3D; cpl[0].rp + cpl[1].rp;&#x2F;&#x2F;实部相加
-    cpl[2].ip &#x3D; cpl[0].ip + cpl[1].ip;&#x2F;&#x2F;虚部相加
-&#125;
-void sub(complex cpl[3])
-&#123;
-    cpl[2].rp &#x3D; cpl[0].rp - cpl[1].rp;&#x2F;&#x2F;实部相减
-    cpl[2].ip &#x3D; cpl[0].ip - cpl[1].ip;&#x2F;&#x2F;虚部相减
-&#125;
-void mul(complex cpl[3])
-&#123;
-    cpl[2].rp &#x3D; cpl[0].rp * cpl[1].rp;&#x2F;&#x2F;实部相乘
-    cpl[2].ip &#x3D; cpl[0].ip * cpl[1].ip;&#x2F;&#x2F;虚部相乘
-&#125;
-void div(complex cpl[3])
-&#123;
-    cpl[2].rp &#x3D; cpl[0].rp &#x2F; cpl[1].rp;&#x2F;&#x2F;实部相除
-    cpl[2].ip &#x3D; cpl[0].ip &#x2F; cpl[1].ip;&#x2F;&#x2F;虚部相除
-&#125;
-
-void print(complex cpl[3])
-&#123;
-    printf(&quot;%0.2f+%0.2fi\n&quot;,cpl[2].rp,cpl[2].ip);&#x2F;&#x2F;输出函数
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>测试数据时务必要测试好上下界。</p>
+<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><p>关心优先级：</p>
+<p><strong>优先队列(Priority Queue)：</strong>特殊的“队列”，取出元素的顺序是依照元素的优先权（关键字）大小，而不是元素进入队列的先后顺序。</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310837665.png" alt="image-20221031083718549"></p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310839723.png" alt="image-20221031083917667"></p>
+<p><strong>堆：</strong>用<strong>完全二叉树</strong>进行存储。</p>
+<h4 id="最大堆的操作"><a href="#最大堆的操作" class="headerlink" title="最大堆的操作"></a>最大堆的操作</h4><p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310851249.png" alt="image-20221031085112150"></p>
+<p>插入：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310852481.png" alt="image-20221031085247397"></p>
+<p>最大堆的删除：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310856064.png" alt="image-20221031085651949"></p>
+<p>最大堆的建立：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202210310903520.png" alt="image-20221031090302406"></p>
+<p>从倒数第一个有儿子的节点开始做。</p>
+<p><strong>从下往上开始做。</strong></p>
 
     
 
@@ -485,7 +538,7 @@ void print(complex cpl[3])
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://kr777.xyz/2022/09/25/复数的四则运算/" title="实验1：复数的四则运算（附源码）" target="_blank">https://kr777.xyz/2022/09/25/复数的四则运算/</a>
+          <a href="https://kr777.xyz/2022/10/28/数据结构（树、堆）/" title="数据结构笔记（树、堆）" target="_blank">https://kr777.xyz/2022/10/28/数据结构（树、堆）/</a>
         </li>
         
         <li>
@@ -507,11 +560,15 @@ void print(complex cpl[3])
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
         		</li>
       		
 		</ul>
@@ -567,7 +624,7 @@ void print(complex cpl[3])
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/09/25/%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/10/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -582,18 +639,18 @@ void print(complex cpl[3])
 
 <nav id="article-nav">
   
-    <a href="/2022/10/06/%E9%80%9A%E8%AE%AF%E5%BD%95%E6%8A%A5%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/10/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          实验2：通讯录管理（附源码）
+          算法基础2（高精度，前缀和，差分）
         
       </div>
     </a>
   
   
-    <a href="/2022/08/28/7%E3%80%81cent%20os%E5%AE%89%E8%A3%85docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cent os安装docker</div>
+    <a href="/2022/10/28/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法基础1</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -620,7 +677,7 @@ void print(complex cpl[3])
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">2.</span> <span class="toc-text">二、实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E5%8F%8A%E8%A6%81%E6%B1%82"><span class="toc-number">3.</span> <span class="toc-text">三、实验内容及要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%8A%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">四、数据结构设计及算法原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%8F%8A%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">五、测试数据及结果分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93%E4%B8%8E%E6%80%9D%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text">六、总结与思考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">数据结构笔记（树、堆）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91"><span class="toc-number">1.1.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">1.1.1.</span> <span class="toc-text">二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1. 先序遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">2. 中序遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">3. 后序遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">4. 总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E7%9A%84%E9%9D%9E%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%EF%BC%88%E5%A0%86%E6%A0%88%EF%BC%89"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">5. 中序遍历的非递归算法（堆栈）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86%E7%9A%84%E9%9D%9E%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">6. 先序遍历的非递归算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E7%9A%84%E9%9D%9E%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">7. 后序遍历的非递归算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">8. 层序遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%BE%8B%E9%A2%98"><span class="toc-number">1.1.1.8.1.</span> <span class="toc-text">1 例题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BE%8B%E9%A2%98"><span class="toc-number">1.1.1.8.2.</span> <span class="toc-text">2 例题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E4%BE%8B%E9%A2%98"><span class="toc-number">1.1.1.8.3.</span> <span class="toc-text">3 例题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E4%BE%8B%E9%A2%98"><span class="toc-number">1.1.1.8.4.</span> <span class="toc-text">4 例题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">1.1.2.</span> <span class="toc-text">二叉搜索树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9F%A5%E6%89%BE"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">1. 查找</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.2.1.1.</span> <span class="toc-text">1 最大最小元素</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8F%92%E5%85%A5"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2. 插入</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%BE%8B%E9%A2%98-1"><span class="toc-number">1.1.2.2.1.</span> <span class="toc-text">1 例题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%A0%E9%99%A4"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">3. 删除</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">3.1 叶子结点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%84%BF%E5%AD%90"><span class="toc-number">1.1.2.3.2.</span> <span class="toc-text">3.2 只有一个儿子</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-%E6%9C%89%E4%B8%A4%E4%B8%AA%E5%84%BF%E5%AD%90"><span class="toc-number">1.1.2.3.3.</span> <span class="toc-text">3.3 有两个儿子</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%EF%BC%9A"><span class="toc-number">1.1.2.3.4.</span> <span class="toc-text">程序实现：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">1.1.3.</span> <span class="toc-text">平衡二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%B0%83%E6%95%B4"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">平衡二叉树的调整</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E9%80%86%E8%BD%AC"><span class="toc-number">1.1.4.</span> <span class="toc-text">单链表的逆转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">1.1.5.</span> <span class="toc-text">堆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%A0%86%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">最大堆的操作</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -633,7 +690,7 @@ void print(complex cpl[3])
 
 
 
-<div id="SOHUCS" sid="复数的四则运算" ></div> 
+<div id="SOHUCS" sid="数据结构（树、堆）" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
