@@ -6,37 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>从零搭建自己的博客（Hexo本地部署）（一） | 狂人的博客</title>
+  <title>算法基础课（双指针，位运算，整数离散化，区间合并） | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="本教程合集旨在帮助你从零完成一个完全属于自己的博客。">
+  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零搭建自己的博客（Hexo本地部署）（一）">
-<meta property="og:url" content="https://kr777.xyz/2022/08/12/1%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%EF%BC%89%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="算法基础课（双指针，位运算，整数离散化，区间合并）">
+<meta property="og:url" content="https://kr777.xyz/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/index.html">
 <meta property="og:site_name" content="狂人的博客">
-<meta property="og:description" content="本教程合集旨在帮助你从零完成一个完全属于自己的博客。">
+<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121243698.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121244559.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121253963.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121547330.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121550109.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121553763.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121556550.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121600206.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121602339.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121602322.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121607173.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121615864.png">
-<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121629317.png">
-<meta property="article:published_time" content="2022-08-12T02:22:55.000Z">
-<meta property="article:modified_time" content="2022-08-27T16:21:26.216Z">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211010053362.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211010054490.png">
+<meta property="og:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211011211636.png">
+<meta property="article:published_time" content="2022-10-31T12:32:45.000Z">
+<meta property="article:modified_time" content="2022-11-01T16:05:30.000Z">
 <meta property="article:author" content="狂人的博客">
-<meta property="article:tag" content="从零搭建博客">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121243698.png">
+<meta name="twitter:image" content="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211010053362.png">
   
     <link rel="alternative" href="/atom.xml" title="狂人的博客" type="application/atom+xml">
   
@@ -283,14 +274,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1、从零搭建自己的博客（Hexo本地部署）（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-第一章（算法基础3）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      从零搭建自己的博客（Hexo本地部署）（一）
+      算法基础课（双指针，位运算，整数离散化，区间合并）
     </h1>
   
 
@@ -302,8 +293,8 @@ var _hmt = _hmt || [];
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/08/12/1%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%EF%BC%89%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-        <time datetime="2022-08-12T02:22:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-12</time>
+<a href="/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/" class="archive-article-date">
+        <time datetime="2022-10-31T12:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-31</time>
 </a>
 
   
@@ -316,7 +307,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">564字</span>
+      <span class="post-count">1.5k字</span>
     </span>
   </span>
 
@@ -325,7 +316,7 @@ var _hmt = _hmt || [];
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -336,114 +327,203 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>本教程合集旨在帮助你从零完成一个完全属于自己的博客。</p>
+    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:kuangrenweb@163.com">kuangrenweb@163.com</a>联系我。欢迎大家批评与指正！</p>
 <span id="more"></span>
 
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Hexo本地部署"><a href="#Hexo本地部署" class="headerlink" title="Hexo本地部署"></a>Hexo本地部署</h2><h3 id="node-js下载"><a href="#node-js下载" class="headerlink" title="node.js下载"></a>node.js下载</h3><!--more-->
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/" title="nodejs下载">node.js下载地址</a></p>
-<p>下载左边的长期版本</p>
-<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121243698.png" alt="image-20220812下午124335658" style="zoom: 50%;" />
+<h1 id="第三课时"><a href="#第三课时" class="headerlink" title="第三课时"></a>第三课时</h1><h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><p><strong>第一类：</strong>一个指针指向一个序列，另外一个指针指向另外一个序列。</p>
+<p><strong>第二类：</strong>两个指针指向同一个序列。</p>
+<p>大概的样子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span>
+j <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> j <span class="token operator">&lt;</span> i <span class="token keyword">and</span> 一种性质<span class="token punctuation">:</span>
+        j<span class="token operator">+</span><span class="token operator">+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>然后一直同意，下一步。。。</p>
-<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121244559.png" alt="image-20220812下午124442522" style="zoom:50%;" />
+<h4 id="核心思想："><a href="#核心思想：" class="headerlink" title="核心思想："></a>核心思想：</h4><p><strong>普通算法：O(N^2)</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>安装后里面含有Node.js和npm包管理器。</p>
-<p>打开终端，切换root用户</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>双指针算法：O(N)</strong></p>
+<p>把暴力算法优化到O(N)。</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/801/">799. 最长连续不重复子序列</a></p>
+<p>重难点：<strong>当出现大于一个的情况，j指针不回溯（重点）</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">100010</span> <span class="token comment">#开数组存出现的个数</span>
+res <span class="token operator">=</span> <span class="token number">0</span><span class="token comment">#记录答案</span>
+j <span class="token operator">=</span> <span class="token number">0</span><span class="token comment">#左边的指针</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#i为右边的指针</span>
+    s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+=</span><span class="token number">1</span><span class="token comment">#a[i]出现的次数加一</span>
+    <span class="token comment">#循环减去数组中的数，通过j的循环，控制s[a[j]]来控制循环，使得j来到当前位置，并且删除前面的所有的s[a[j]]</span>
+    <span class="token keyword">while</span> s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">:</span>
+        s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">-=</span><span class="token number">1</span><span class="token comment">#直接把j指针当前所在的a[i]的数删掉一个</span>
+        j<span class="token operator">+=</span><span class="token number">1</span><span class="token comment">#j指针向右移动以为</span>
 
-<p>查看node和npm版本</p>
-<pre class="line-numbers language-none"><code class="language-none">node -v
-npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+    res <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> i <span class="token operator">-</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>用npm安装cnpm（国内淘宝镜像源）（<code>-g</code>为全局安装）</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>看到下面这个就算安装完成了</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121253963.png" alt="image-20220812下午125324931"></p>
-<p>查看cnpm版本</p>
-<pre class="line-numbers language-none"><code class="language-none">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<hr>
-<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>然后安装hexo</p>
-<pre class="line-numbers language-none"><code class="language-none">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121547330.png" alt="image-20220812下午34709253"  />
-
-<p>这样就算安装完成了</p>
-<p>查看hexo版本</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121550109.png" alt="image-20220812下午35036065"></p>
-<p>查看自己的路径<code>pwd</code></p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121553763.png" alt="image-20220812下午35355729"></p>
-<p>建立空的文件夹<code>myblog</code></p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121556550.png" alt="image-20220812下午35613510"></p>
-<p>东西都是在这个目录里，做错了直接把这个凎掉重来就行</p>
-<p>然后进入这个文件夹</p>
-<pre class="line-numbers language-none"><code class="language-none">cd myblog&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>接着用hexo直接生成博客</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>等待一段时间，下图这样就完成了</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121600206.png" alt="image-20220812下午40040155"></p>
-<p>里面生成了很多文件</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121602339.png" alt="image-20220812下午40210301"></p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121602322.png" alt="image-20220812下午40229289"></p>
-<hr>
-<p>这里插入一些hexo常用指令</p>
-<pre class="line-numbers language-none"><code class="language-none">#hexo之一键三连
-hexo clean	#清理缓存
-hexo g			#生成博客
-hexo s			#启动博客，在本地http:&#x2F;&#x2F;localhost:4000&#x2F;可以预览<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;
-hexo d			#远程同步到服务器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
+<p>见下图：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211010053362.png" alt="image-20221101005328305"></p>
+<p>此时已经输入完5，准备输入第二个5的时候，满足了while循环条件：</p>
+<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211010054490.png" alt="image-20221101005419446"></p>
+<p>使得j增加，而且达到了清空s的目的，目的是防止后面的重复输入的数中还有之前重复输入过的相同的数字。</p>
+<p>类似于阅后即焚。</p>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="求n的第k位数字"><a href="#求n的第k位数字" class="headerlink" title="求n的第k位数字"></a>求n的第k位数字</h3><p><strong>提问：</strong>n的二进制表示中，第k位是几？</p>
+<p><strong>个位一般为第0位</strong></p>
+<p>先把第k位移动到最后一位。</p>
+<p>再看个位是几。 </p>
+<p>常用方法：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">n <span class="token operator">>></span> k <span class="token operator">&amp;</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <hr>
-<p>用<code>hexo s</code>生成博客，并在<a target="_blank" rel="noopener" href="http://localhost:4000/">本地</a>可以预览</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121607173.png" alt="image-20220812下午40718128"></p>
-<p>新建博客</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>基本位运算：</p>
+<p>左移：即放大：<code>&lt;&lt;</code>。</p>
+<p>右移：即缩小：<code>&gt;&gt;</code>。</p>
+<p>因为二进制开头为<code>0bxxxxxx</code>，所以去掉0b则要使用<code>bin()[2:]</code></p>
+<hr>
+<h3 id="lowbit操作"><a href="#lowbit操作" class="headerlink" title="lowbit操作"></a>lowbit操作</h3><p>作用：返回x的最后一位1。</p>
+<p>比如：1010，lowbit返回10。</p>
+<p>再比如：10100，lowbit返回100。</p>
+<p>实现原理：<code>x&amp;-x</code>&#x3D;<code>x&amp;~x+1</code></p>
+<p>lowbit函数用法：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">lowbit</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">&amp;</span> <span class="token operator">-</span>a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>&#x3D;&#x3D;INFO Created: &#x2F;Users&#x2F;luomingyu&#x2F;myblog&#x2F;source&#x2F;_posts&#x2F;你的博客文章名.md&#x3D;&#x3D;</p>
-<p>进入上面的博客地址</p>
-<pre class="line-numbers language-none"><code class="language-none">cd source&#x2F;_posts&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>例题：<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/803/">801. 二进制中1的个数</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">lowbit</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">&amp;</span> <span class="token operator">-</span>a
 
-<p><code>ls -l</code>发现里面生成了一篇文章</p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121615864.png" alt="image-20220812下午41501815"></p>
-<p>打开这个文件就可以编辑，我这里直接用终端编辑</p>
-<pre class="line-numbers language-none"><code class="language-none">vim 你的博客文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><code>i</code>进入编辑，MarkDown语法</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token front-matter yaml language-yaml">title: 你的博客文章名
-date: 2022-08-12 16:11:18
-tags:</span>
-<span class="token punctuation">---</span></span>
-<span class="token title important"><span class="token punctuation">#</span> 大家好，这是我的第一篇博客</span>
-<span class="token title important"><span class="token punctuation">##</span> 标题</span>
-<span class="token title important">内容
-<span class="token punctuation">---</span></span>
-<span class="token title important"><span class="token punctuation">##</span> 标题</span>
-<span class="token title important">内容
-<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+l <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a <span class="token operator">=</span> l<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    
+    s <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        a <span class="token operator">-=</span> lowbit<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token comment">#每次去掉a中的最后一位1，直到a=0时退出循环</span>
+        s <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><code>Esc</code>后<code>:wq</code>保存并退出</p>
-<p>退回<code>myblog</code>主目录</p>
-<pre class="line-numbers language-none"><code class="language-none">cd ..&#x2F;..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>清理，生成，发布</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo clean
-hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>这时候进入<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%B0%B1%E5%87%BA%E7%8E%B0%E5%88%9A%E6%89%8D%E5%86%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://localhost:4000/就出现刚才写的博客了</a></p>
-<p><img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202208121629317.png" alt="image-20220812下午42941264"></p>
-<p>&#x3D;&#x3D;<strong>到这里，hexo搭建完成了</strong>&#x3D;&#x3D;</p>
-<p>下一篇：从零搭建自己的博客（Hexo+Github+阿里云+宝塔面板）（二）</p>
+<h2 id="整数离散化"><a href="#整数离散化" class="headerlink" title="整数离散化"></a>整数离散化</h2><p>值域范围大， 个数少</p>
+<img src="https://kuangren-220811.oss-cn-shanghai.aliyuncs.com/Markdown_IMG/202211011211636.png" alt="image-20221101121108576" style="zoom:50%;" />
+
+<p>映射到0到自然数。（叫做离散化）</p>
+<p>问题1：a[]中可能有重复元素（去重）</p>
+<p>问题2：如何算出x离散化后的值（二分）</p>
+<p>去重模板（要先排序）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>然后，二分求出x对应的离散化的值</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    l <span class="token operator">=</span> <span class="token number">0</span>
+    r <span class="token operator">=</span> a<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span>
+        <span class="token keyword">if</span> a<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">:</span>
+            r <span class="token operator">=</span> mid
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+	<span class="token keyword">return</span> r <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">#是否加一和题目有关</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>具体题目：</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/804/">802. 区间和</a></p>
+<p>思路：用**add[]<strong>和</strong>q[]**来分别获得输入的不同组添加和查询。</p>
+<p>再用all对所有需要使用的数的位置进行排队和划分。</p>
+<p><strong>a[]：</strong>映射后的数组</p>
+<p><strong>s[]：</strong>a[]的前缀和</p>
+<p><strong>add[]：</strong>加的操作（a， b）</p>
+<p><strong>q[]：</strong>询问操作（a， b）</p>
+<p><strong>alls[]：</strong>所有操作的数的位置的集合（用作离散化）（把很松散的数据调整到密集的地方）</p>
+<p><strong>具体实现代码：</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    l <span class="token operator">=</span> <span class="token number">0</span>
+    r <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>alls<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span> <span class="token comment">#利用位运算来整除2</span>
+        <span class="token keyword">if</span> alls<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">:</span> <span class="token comment">#如果x在all函数的左边</span>
+            r <span class="token operator">=</span> mid <span class="token comment">#把右端点移动到左边</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token comment">#把左端点移动到右边+1</span>
+    <span class="token keyword">return</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token comment">#返回所在位置，后续我们要使用从1开始计数的，所以</span>
+
+n<span class="token punctuation">,</span> m <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+N <span class="token operator">=</span> <span class="token number">300010</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> N<span class="token comment">#设置映射后的空间</span>
+s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> N<span class="token comment">#a的前缀和</span>
+
+add <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment">#加数操作</span>
+q <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment">#询问操作</span>
+
+alls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment">#所有有数的位置和有操作的位置的集合</span>
+
+<span class="token comment">#读入加法操作并保存</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    x<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    add<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    alls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+<span class="token comment">#读入询问操作并保存</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    l<span class="token punctuation">,</span> r <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    q<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    alls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>l<span class="token punctuation">)</span>
+    alls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+
+<span class="token comment">#把所有的有操作的数的位置记录下来，并且排序去重，准备依次映射到a数组中</span>
+alls <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token builtin">sorted</span><span class="token punctuation">(</span>alls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">#把需要加上的数字存入映射的空间</span>
+<span class="token keyword">for</span> x<span class="token punctuation">,</span> c <span class="token keyword">in</span> add<span class="token punctuation">:</span>
+    x1 <span class="token operator">=</span> find<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token comment">#寻找映射后的位置</span>
+    a<span class="token punctuation">[</span>x1<span class="token punctuation">]</span> <span class="token operator">+=</span> c<span class="token comment">#在映射后的位置上加上该数</span>
+
+<span class="token comment">#做前缀和</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>alls<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    
+<span class="token comment">#求前缀和中第l个数和第r个数</span>
+<span class="token keyword">for</span> l<span class="token punctuation">,</span> r <span class="token keyword">in</span> q<span class="token punctuation">:</span>
+    l2 <span class="token operator">=</span> find<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token comment">#寻找l的位置</span>
+    r2 <span class="token operator">=</span> find<span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token comment">#寻找r的位置</span>
+    res <span class="token operator">=</span> s<span class="token punctuation">[</span>r2<span class="token punctuation">]</span> <span class="token operator">-</span> s<span class="token punctuation">[</span>l2 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token comment">#求前缀和中第l个数和第r个数</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="区间和并"><a href="#区间和并" class="headerlink" title="区间和并"></a>区间和并</h2><p>给了很多很多区间，当两个区间有交集的话，可以合并成一个长的区间。</p>
+<ol>
+<li>按照区间左端点排序</li>
+<li>扫描整个区间，扫描的过程中，把所有有交集的区间合并。</li>
+</ol>
+<p>例题：<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/805/">803. 区间合并</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment">#创建所有区间的集合</span>
+<span class="token comment">#把所有区间通过这个循环放入s</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    st<span class="token punctuation">,</span> ed <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    s<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>st<span class="token punctuation">,</span> ed<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">#排序s，默认以第一个元素开始</span>
+s<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">#首先假设st和ed</span>
+st <span class="token operator">=</span> s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+ed <span class="token operator">=</span> s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+res <span class="token operator">=</span> <span class="token number">1</span><span class="token comment">#第一个集合</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> st <span class="token operator">&lt;=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;=</span>ed<span class="token punctuation">:</span><span class="token comment">#判断下一个所给的区间头部是否在本区间的头里</span>
+        ed <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> ed<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">></span> ed<span class="token punctuation">:</span><span class="token comment">#头部在这个区间的外面</span>
+        res <span class="token operator">+=</span> <span class="token number">1</span><span class="token comment">#数量+1</span>
+        st <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token comment">#重设开头结尾</span>
+        ed <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
     
 
@@ -458,7 +538,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://kr777.xyz/2022/08/12/1、从零搭建自己的博客（Hexo本地部署）（一）/" title="从零搭建自己的博客（Hexo本地部署）（一）" target="_blank">https://kr777.xyz/2022/08/12/1、从零搭建自己的博客（Hexo本地部署）（一）/</a>
+          <a href="https://kr777.xyz/2022/10/31/第一章（算法基础3）/" title="算法基础课（双指针，位运算，整数离散化，区间合并）" target="_blank">https://kr777.xyz/2022/10/31/第一章（算法基础3）/</a>
         </li>
         
         <li>
@@ -480,11 +560,15 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">从零搭建博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
         		</li>
       		
 		</ul>
@@ -540,7 +624,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/08/12/1%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%EF%BC%89%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -555,15 +639,11 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 <nav id="article-nav">
   
-    <a href="/2022/08/12/2%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%EF%BC%89%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          从零搭建自己的博客（部署到GitHub）（二）
-        
-      </div>
-    </a>
   
+    <a href="/2022/10/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法基础2（高精度，前缀和，差分）</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -588,7 +668,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">1.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2"><span class="toc-number">1.1.</span> <span class="toc-text">Hexo本地部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#node-js%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.1.1.</span> <span class="toc-text">node.js下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">Hexo安装</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%AF%BE%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text">第三课时</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-number">1.1.</span> <span class="toc-text">双指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">核心思想：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.</span> <span class="toc-text">位运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82n%E7%9A%84%E7%AC%ACk%E4%BD%8D%E6%95%B0%E5%AD%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">求n的第k位数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lowbit%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.2.</span> <span class="toc-text">lowbit操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="toc-number">1.3.</span> <span class="toc-text">整数离散化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E5%92%8C%E5%B9%B6"><span class="toc-number">1.4.</span> <span class="toc-text">区间和并</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -601,7 +681,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 
 
-<div id="SOHUCS" sid="1、从零搭建自己的博客（Hexo本地部署）（一）" ></div> 
+<div id="SOHUCS" sid="第一章（算法基础3）" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
