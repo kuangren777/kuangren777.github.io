@@ -6,16 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>Tag: docker | 狂人的博客</title>
+  <title>算法基础课 | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="狂人的博客">
-<meta property="og:url" content="https://kr777.xyz/tags/docker/index.html">
+  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！ 此为校内选拔赛CTF第二题，Crypto类。 CTF初学者。 RSA公钥的加密解密。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法基础课">
+<meta property="og:url" content="https://kr777.xyz/2022/11/05/CTF%E6%A0%A1%E5%86%85%E8%B5%9B/index.html">
 <meta property="og:site_name" content="狂人的博客">
+<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！ 此为校内选拔赛CTF第二题，Crypto类。 CTF初学者。 RSA公钥的加密解密。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-05T12:35:59.000Z">
+<meta property="article:modified_time" content="2022-11-07T12:47:19.000Z">
 <meta property="article:author" content="狂人的博客">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="crypto">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="狂人的博客" type="application/atom+xml">
@@ -263,128 +271,262 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CTF校内赛" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/08/28/7%E3%80%81cent%20os%E5%AE%89%E8%A3%85docker/" class="archive-article-date">
-        <time datetime="2022-08-27T16:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-28</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/08/28/7%E3%80%81cent%20os%E5%AE%89%E8%A3%85docker/" target="_blank">cent os安装docker</a>
   
+    <h1 class="article-title" itemprop="name">
+      算法基础课
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/11/05/CTF%E6%A0%A1%E5%86%85%E8%B5%9B/" class="archive-article-date">
+        <time datetime="2022-11-05T12:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-05</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">211字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:kuangrenweb@163.com">kuangrenweb@163.com</a>联系我。欢迎大家批评与指正！</p>
+<p>此为校内选拔赛CTF第二题，Crypto类。</p>
+<p>CTF初学者。</p>
+<h2 id="RSA公钥的加密解密。"><a href="#RSA公钥的加密解密。" class="headerlink" title="RSA公钥的加密解密。"></a>RSA公钥的加密解密。</h2><span id="more"></span>
+
+<p>题干：</p>
+<p>给定RSA密文[971,922,605,1446,1704,889,2090,605,1899,1915,2088,1988,1235,1032,65,922,958,1988,2144,591,1988,2270,2088,1032,65,958,2233]，已知RSA的公钥为{7,2449}，请还原出对应的明文。</p>
+<p>已知RSA公式：</p>
+<p><code>密文==明文**公钥1mod公钥2</code></p>
+<p>所以写出以下代码：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+flag <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> a<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2449</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> x <span class="token operator">==</span> i <span class="token operator">**</span> <span class="token number">7</span> <span class="token operator">%</span> <span class="token number">2449</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">chr</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"end"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输入密文：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">971</span><span class="token punctuation">,</span><span class="token number">922</span><span class="token punctuation">,</span><span class="token number">605</span><span class="token punctuation">,</span><span class="token number">1446</span><span class="token punctuation">,</span><span class="token number">1704</span><span class="token punctuation">,</span><span class="token number">889</span><span class="token punctuation">,</span><span class="token number">2090</span><span class="token punctuation">,</span><span class="token number">605</span><span class="token punctuation">,</span><span class="token number">1899</span><span class="token punctuation">,</span><span class="token number">1915</span><span class="token punctuation">,</span><span class="token number">2088</span><span class="token punctuation">,</span><span class="token number">1988</span><span class="token punctuation">,</span><span class="token number">1235</span><span class="token punctuation">,</span><span class="token number">1032</span><span class="token punctuation">,</span><span class="token number">65</span><span class="token punctuation">,</span><span class="token number">922</span><span class="token punctuation">,</span><span class="token number">958</span><span class="token punctuation">,</span><span class="token number">1988</span><span class="token punctuation">,</span><span class="token number">2144</span><span class="token punctuation">,</span><span class="token number">591</span><span class="token punctuation">,</span><span class="token number">1988</span><span class="token punctuation">,</span><span class="token number">2270</span><span class="token punctuation">,</span><span class="token number">2088</span><span class="token punctuation">,</span><span class="token number">1032</span><span class="token punctuation">,</span><span class="token number">65</span><span class="token punctuation">,</span><span class="token number">958</span><span class="token punctuation">,</span><span class="token number">2233</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>解得明文：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">flag<span class="token punctuation">&#123;</span>shamir_would_be_proud<span class="token punctuation">&#125;</span>end<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>解密成功。</p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          狂人的博客
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://kr777.xyz/2022/11/05/CTF校内赛/" title="算法基础课" target="_blank">https://kr777.xyz/2022/11/05/CTF校内赛/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本文章原载于 <a href="https://kr777.xyz" target="_blank">狂人的博客</a>，未经本人许可，禁止搬运！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cent os</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络安全</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">crypto</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/11/05/CTF%E6%A0%A1%E5%86%85%E8%B5%9B/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/08/25/8%E3%80%81%E5%9F%BA%E4%BA%8EWireguard%E6%8A%80%E6%9C%AF%E7%9A%84%E8%99%9A%E6%8B%9F%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-        <time datetime="2022-08-25T08:28:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-25</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法基础3（双指针，位运算，整数离散化，区间合并）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/08/25/8%E3%80%81%E5%9F%BA%E4%BA%8EWireguard%E6%8A%80%E6%9C%AF%E7%9A%84%E8%99%9A%E6%8B%9F%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" target="_blank">基于Wireguard技术的虚拟个人网络搭建（基于Lighthouse服务器）</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cent os</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内网穿透</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">wireguard</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RSA%E5%85%AC%E9%92%A5%E7%9A%84%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">RSA公钥的加密解密。</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+<div id="SOHUCS" sid="CTF校内赛" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "false#cywen7KUj",
+        conf: "false#d1a4b0eeea84d28365c0d9626efc7ba2"
+    });
+</script>
+</script>
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -425,9 +567,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

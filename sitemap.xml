@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kr777.xyz/2022/11/05/CTF%E6%A0%A1%E5%86%85%E8%B5%9B/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kr777.xyz/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/</loc>
     
     <lastmod>2022-11-01</lastmod>
@@ -257,6 +266,48 @@
   </url>
   
   <url>
+    <loc>https://kr777.xyz/tags/CTF/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/python/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/crypto/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/acm/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kr777.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-11-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -271,28 +322,7 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-11-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/C-C/</loc>
-    <lastmod>2022-11-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/python/</loc>
-    <lastmod>2022-11-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/acm/</loc>
     <lastmod>2022-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
