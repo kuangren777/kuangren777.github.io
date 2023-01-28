@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kr777.xyz">
-  <title>算法基础2（高精度，前缀和，差分） | 狂人的博客</title>
+  <title>OSS测试 | 狂人的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
+  <meta name="description" content="请查看以下图片，以下图片为使用cdn链接上传">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法基础2（高精度，前缀和，差分）">
-<meta property="og:url" content="https://kr777.xyz/2022/10/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802%EF%BC%89/index.html">
+<meta property="og:title" content="OSS测试">
+<meta property="og:url" content="https://kr777.xyz/2023/01/28/test/index.html">
 <meta property="og:site_name" content="狂人的博客">
-<meta property="og:description" content="此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过kuangrenweb@163.com联系我。欢迎大家批评与指正！">
+<meta property="og:description" content="请查看以下图片，以下图片为使用cdn链接上传">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-28T16:40:38.000Z">
-<meta property="article:modified_time" content="2022-10-31T03:37:04.000Z">
+<meta property="og:image" content="http://krleanote.asia/Markdown_IMG/202301281238151.png">
+<meta property="article:published_time" content="2023-01-28T04:39:46.000Z">
+<meta property="article:modified_time" content="2023-01-28T04:39:42.000Z">
 <meta property="article:author" content="狂人的博客">
 <meta property="article:tag" content="python">
+<meta property="article:tag" content="acm">
 <meta property="article:tag" content="算法">
-<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://krleanote.asia/Markdown_IMG/202301281238151.png">
   
     <link rel="alternative" href="/atom.xml" title="狂人的博客" type="application/atom+xml">
   
@@ -270,14 +272,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一章（算法基础2）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      算法基础2（高精度，前缀和，差分）
+      OSS测试
     </h1>
   
 
@@ -289,8 +291,8 @@ var _hmt = _hmt || [];
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/10/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802%EF%BC%89/" class="archive-article-date">
-        <time datetime="2022-10-28T16:40:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-29</time>
+<a href="/2023/01/28/test/" class="archive-article-date">
+        <time datetime="2023-01-28T04:39:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
 </a>
 
   
@@ -303,7 +305,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.9k字</span>
+      <span class="post-count">19字</span>
     </span>
   </span>
 
@@ -312,7 +314,7 @@ var _hmt = _hmt || [];
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">9分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -323,318 +325,8 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>此笔记仅供参考，有不完善的地方还请多多海涵，也可以通过<a href="mailto:kuangrenweb@163.com">kuangrenweb@163.com</a>联系我。欢迎大家批评与指正！</p>
-<span id="more"></span>
-
-<h1 id="第二课时"><a href="#第二课时" class="headerlink" title="第二课时"></a>第二课时</h1><h2 id="高精度（仅C-使用）"><a href="#高精度（仅C-使用）" class="headerlink" title="高精度（仅C++使用）"></a>高精度（仅C++使用）</h2><p>因为python可以是无限大的。</p>
-<p>位数为10^6^。</p>
-<p>大概分为四种：</p>
-<ul>
-<li>大整数相加</li>
-<li>大整数相减</li>
-<li>大数乘小数</li>
-<li>大数除以小数</li>
-</ul>
-<p>大数乘大数一般不会考。</p>
-<hr>
-<p>大整数一般是每一位存到数组中。</p>
-<p><strong>一般是从低位存到高位。</strong>个位数先存。</p>
-<p>一般进位会在高位增加一个数，可以直接在数组末尾添加。否则会平移整个数组。</p>
-<p><strong>运算：</strong></p>
-<p><strong>模拟人工加法：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-&#x2F;&#x2F; C &#x3D; A + B
-vector&lt;int&gt; add(vector&lt;int&gt; &amp;A, vector&lt;int&gt; &amp;B)
-&#123;
-    vector&lt;int&gt; C;
-    
-    int t &#x3D; 0;
-    for(int i &#x3D; 0; i &lt; A.size() || i &lt; B.size(); i++)
-    &#123;
-        if (i &lt; A.size())
-            t+&#x3D;A[i];
-		if (i &lt; B.size())
-            t+&#x3D;B[i];
-        C.push_back(t % 10);
-        t &#x2F;&#x3D; 10;
-    &#125;
-    if (t)
-        C.push_back(1);
-    return C;
-&#125;
-
-int main()
-&#123;
-    string a, b;
-    vector&lt;int&gt; A, B;
-    
-    cin &gt;&gt; a &gt;&gt; b;
-    for(int i &#x3D; a.size() - 1; i &gt;&#x3D; 0; i--)
-        A.push_back(a[i] - &#39;0&#39;);
-    for(int i &#x3D; b.size() - 1; i &gt;&#x3D; 0; i--)
-        B.push_back(b[i] - &#39;0&#39;);
-    
-    auto C &#x3D; add(A, B);
-    
-    for( int &#x3D; C.size() - 1; i &gt;&#x3D;0; i--)
-        printf(&quot;%d&quot;, C[i]);
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>模拟人工减法：</strong></p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-&#x2F;&#x2F; C &#x3D; A - B
-vector&lt;int&gt; sub(vector&lt;int&gt; &amp;A, vector&lt;int&gt; &amp;B)
-&#123;
-    vector&lt;int&gt; C;
-    for (int i &#x3D; 0, t &#x3D; 0;i &lt; A.size(); i++)
-    &#123;
-        t &#x3D; A[i] - B[i] - t;
-        if (i &lt; B.size())
-            t -&#x3D; B[i];
-        C.push_back((t + 10) % 10);
-        if(t &lt; 0)
-            t &#x3D; 1;
-        else
-            t &#x3D; 0;
-    &#125;
-    while (C.size() &gt; 1 %% C.back &#x3D;&#x3D; 0)&#x2F;&#x2F;去掉前导0
-        C.pop_back();
-&#125;
-
-bool cmp(vector&lt;int&gt; &amp;A, vector&lt;int&gt; &amp;B)
-&#123;
-    if (A.size() !&#x3D; B.size())
-        return A.size() &gt; B.size();
-    for (int i &#x3D; A.size() -1; i&gt;&#x3D;0; i--)
-        if (A[i] !&#x3D; B[i])
-            return A[i] &gt; b[i];
-    return true;
-&#125;
-
-int main()
-&#123;
-    string a, b;
-    vector&lt;int&gt; A, B;
-    
-    cin &gt;&gt; a &gt;&gt; b;
-    for(int i &#x3D; a.size() - 1; i &gt;&#x3D; 0; i--)
-        A.push_back(a[i] - &#39;0&#39;);
-    for(int i &#x3D; b.size() - 1; i &gt;&#x3D; 0; i--)
-        B.push_back(b[i] - &#39;0&#39;);
-    if (cmp(A, B))
-    &#123;
-        auto C &#x3D; add(A, B);
-        &#96;
-   	 	for( int &#x3D; C.size() - 1; i &gt;&#x3D;0; i--)
-        	printf(&quot;%d&quot;, C[i]);
-    &#125;
-    else
-    &#123;
-        auto C &#x3D; add(B, A);
-        printf(&quot;-&quot;)
-   	 	for( int &#x3D; C.size() - 1; i &gt;&#x3D;0; i--)
-        	printf(&quot;%d&quot;, C[i]);
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>乘法<strong>（大数乘小数）</strong>：</p>
-<p>模拟乘法是把B（小数）看成整体再和A（大数）去乘。</p>
-<p>t为进位</p>
-<p>个位为<code>A0 * B % 10</code></p>
-<p>十位为<code>(A1 * B + t) % 10</code></p>
-<p>程序实现：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-vector &lt;int&gt; mul(vector &lt;int&gt; &amp; A, int b) &#123;
-    vector &lt;int&gt; C;
-
-    int t &#x3D; 0;
-    for (int i &#x3D; 0; i &lt; A.size(); i ++) &#123;
-        t +&#x3D; A[i] * b;       &#x2F;&#x2F; t + A[i] * b &#x3D; 7218
-        C.push_back(t % 10); &#x2F;&#x2F; 只取个位 8
-        t &#x2F;&#x3D; 10;             &#x2F;&#x2F; 721 看作 进位
-    &#125;
-
-    while (t) &#123;            &#x2F;&#x2F; 处理最后剩余的 t
-        C.push_back(t % 10);
-        t &#x2F;&#x3D; 10;
-    &#125;
-
-    while (C.size() &gt; 1 &amp;&amp; C.back() &#x3D;&#x3D; 0) C.pop_back();
-
-    return C;
-&#125;
-
-int main() &#123;
-    string a;
-    int b;
-    cin &gt;&gt; a &gt;&gt; b;
-
-    vector &lt;int&gt; A;
-    for (int i &#x3D; a.size() - 1; i &gt;&#x3D; 0; i --) A.push_back(a[i] - &#39;0&#39;);
-
-    auto C &#x3D; mul(A, b);
-
-    for (int i &#x3D; C.size() - 1; i &gt;&#x3D; 0; i --) &#123;
-        cout &lt;&lt; C[i];
-    &#125;
-
-    return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h2><p>假设数组：a1, a2, a3, a4……, ai</p>
-<p>前缀和数组则为：si &#x3D; a1+a2+a3+a4+……+ai</p>
-<p><strong>问题1：如何求</strong></p>
-<p>可以递推，s[i] &#x3D;s[i-1]+a[i]，前提：<strong>s[0]&#x3D;0</strong></p>
-<p><strong>问题2：作用</strong></p>
-<p>可以快速求解一段的和，<strong>一次运算就可以算出来任意一段区间内的和</strong>。</p>
-<p><strong>思想：</strong></p>
-<p><strong>第L个数到第R个数的和为s[R]-s[L-1]</strong></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">n<span class="token punctuation">,</span> m <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">100010</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    s<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> 
-<span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>b<span class="token punctuation">]</span> <span class="token operator">-</span> s<span class="token punctuation">[</span>a <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>补充：</p>
-<p>提高cin读取速度：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">ios::sync_with_studio(false)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>副作用，不能在用scanf了。</p>
-<hr>
-<p>二维数组的前缀和：</p>
-<p>两重循环即可。</p>
-<p><strong>容斥原理</strong>的思想：</p>
- <pre class="line-numbers language-python" data-language="python"><code class="language-python">n<span class="token punctuation">,</span> m<span class="token punctuation">,</span> q <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token operator">*</span> <span class="token number">0</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token operator">*</span> <span class="token number">0</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-k <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-
-<span class="token comment">#注意要让s[0][0]=0</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    k <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> k<span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-
-<span class="token comment">#求前缀和</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> s<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-
-<span class="token comment">#求子矩阵和</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> x2<span class="token punctuation">,</span> y2 <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">-</span> s<span class="token punctuation">[</span>x1 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">-</span>s<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y1 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> s<span class="token punctuation">[</span>x1 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y1 <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">#和x1,y1有关的要全部减一，因为要保留x1和y1一列。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="差分（前缀和的逆运算）"><a href="#差分（前缀和的逆运算）" class="headerlink" title="差分（前缀和的逆运算）"></a>差分（前缀和的逆运算）</h2><p>已知：a1, a2, a3……ai</p>
-<p>构造 b1, b2, b3, b4…..bi</p>
-<p>使得 ai&#x3D;b1+b2+b3+….+bi</p>
-<h3 id="一维："><a href="#一维：" class="headerlink" title="一维："></a><strong>一维：</strong></h3><p>b1&#x3D;a1</p>
-<p>b2&#x3D;a2-a1</p>
-<p>b3&#x3D;a3-a2</p>
-<p>…..</p>
-<p>b<del>i</del>&#x3D;a<del>i</del>-a<del>i-1</del></p>
-<p>差分的作用：可以用O（1）的时间，给原数组中某一个区间全部加上一个值。</p>
-<p><strong>在a的L和R中插入一个数，则只需要b<del>L</del>+c, b<del>R+1</del>-c。</strong></p>
-<hr>
-<h4 id="差分例题："><a href="#差分例题：" class="headerlink" title="差分例题："></a>差分例题：</h4><p>输入一个长度为 nn 的整数序列。</p>
-<p>接下来输入 mm 个操作，每个操作包含三个整数 l,r,cl,r,c，表示将序列中 [l,r][l,r] 之间的每个数加上 cc。</p>
-<p>请你输出进行完所有操作后的序列。</p>
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 nn 和 mm。</p>
-<p>第二行包含 nn 个整数，表示整数序列。</p>
-<p>接下来 mm 行，每行包含三个整数 l，r，cl，r，c，表示一个操作。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共一行，包含 nn 个整数，表示最终序列。</p>
-<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>1≤n,m≤1000001≤n,m≤100000,<br>1≤l≤r≤n1≤l≤r≤n,<br>−1000≤c≤1000−1000≤c≤1000,<br>−1000≤整数序列中元素的值≤1000−1000≤整数序列中元素的值≤1000</p>
-<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><pre class="line-numbers language-none"><code class="language-none">6 3
-1 2 2 1 2 1
-1 3 1
-3 5 1
-1 6 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><pre class="line-numbers language-none"><code class="language-none">3 4 5 3 4 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h4 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#插入操作</span>
-<span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    b<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token operator">+=</span>c
-    b<span class="token punctuation">[</span>r<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-=</span>c
-
-
-n<span class="token punctuation">,</span> m <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#一般前缀和和差分都是从下标为1开始计算</span>
-b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token number">100010</span><span class="token comment">#创建b数组</span>
-
-<span class="token comment">#对a数组进行差分</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    insert<span class="token punctuation">(</span>i<span class="token punctuation">,</span> i<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment">#用拿到的值进行运算</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    l<span class="token punctuation">,</span> r<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    insert<span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
-
-<span class="token comment">#再求前缀和</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> b<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="二维："><a href="#二维：" class="headerlink" title="二维："></a>二维：</h3><p>由aij构造bij</p>
-<p><strong>b[x1] [y1] +&#x3D;c</strong></p>
-<p><strong>b[x2+1] [y1] -&#x3D;c</strong></p>
-<p><strong>b[x1] [y2+1] -&#x3D;c</strong></p>
-<p><strong>b[x2+1] [y2+1]+&#x3D;c</strong></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> x2<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#差分函数</span>
-    b<span class="token punctuation">[</span>x1<span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token punctuation">]</span> <span class="token operator">+=</span> c
-    b<span class="token punctuation">[</span>x2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token punctuation">]</span> <span class="token operator">-=</span>c
-    b<span class="token punctuation">[</span>x1<span class="token punctuation">]</span><span class="token punctuation">[</span>y2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-=</span>c
-    b<span class="token punctuation">[</span>x2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+=</span>c
-
-
-n<span class="token punctuation">,</span> m<span class="token punctuation">,</span> q <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token operator">*</span> <span class="token number">0</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span> <span class="token operator">*</span> <span class="token number">0</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-<span class="token comment">#填入a[]的值</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    k <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> k<span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-
-<span class="token comment">#b为a的差分矩阵</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        insert<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment">#获取询问，进行差分</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> x2<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    insert<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> x2<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
-
-<span class="token comment">#求前缀和</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> b<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> b<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-
-<span class="token comment">#输出</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">" "</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+    <p>请查看以下图片，以下图片为使用cdn链接上传</p>
+<p><img src="http://krleanote.asia/Markdown_IMG/202301281238151.png" alt="image-20230128123800095"></p>
 
     
 
@@ -649,7 +341,7 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://kr777.xyz/2022/10/29/第一章（算法基础2）/" title="算法基础2（高精度，前缀和，差分）" target="_blank">https://kr777.xyz/2022/10/29/第一章（算法基础2）/</a>
+          <a href="https://kr777.xyz/2023/01/28/test/" title="OSS测试" target="_blank">https://kr777.xyz/2023/01/28/test/</a>
         </li>
         
         <li>
@@ -675,11 +367,11 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">acm</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -735,7 +427,7 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2022/10/29/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802%EF%BC%89/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://kr777.xyz/2023/01/28/test/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -750,18 +442,9 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
 
 <nav id="article-nav">
   
-    <a href="/2022/10/31/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%88%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%803%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          算法基础3（双指针，位运算，整数离散化，区间合并）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/10/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%E3%80%81%E5%A0%86%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数据结构笔记（树、堆）</div>
+    <a href="/2022/11/05/CTF%E6%A0%A1%E5%86%85%E8%B5%9B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CTF校内赛（RSA公钥的加密解密）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -788,7 +471,7 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%AF%BE%E6%97%B6"><span class="toc-number">1.</span> <span class="toc-text">第二课时</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%EF%BC%88%E4%BB%85C-%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">高精度（仅C++使用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C"><span class="toc-number">1.2.</span> <span class="toc-text">前缀和</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%EF%BC%88%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E9%80%86%E8%BF%90%E7%AE%97%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">差分（前缀和的逆运算）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">一维：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E4%BE%8B%E9%A2%98%EF%BC%9A"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">差分例题：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">输出样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94%EF%BC%9A"><span class="toc-number">1.3.1.7.</span> <span class="toc-text">解答：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">二维：</span></a></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -801,7 +484,7 @@ b <span class="token operator">=</span> <span class="token punctuation">[</span>
 
 
 
-<div id="SOHUCS" sid="第一章（算法基础2）" ></div> 
+<div id="SOHUCS" sid="test" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

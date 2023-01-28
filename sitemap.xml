@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kr777.xyz/2022/10/24/test/</loc>
+    <loc>https://kr777.xyz/2023/01/28/test/</loc>
     
     <lastmod>2023-01-28</lastmod>
     
@@ -205,20 +205,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/github/</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/yilia-plus/</loc>
     <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -254,7 +240,35 @@
   </url>
   
   <url>
+    <loc>https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2023-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kr777.xyz/tags/docker/</loc>
+    <lastmod>2023-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2023-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/wireguard/</loc>
+    <lastmod>2023-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/github/</loc>
     <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -289,20 +303,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kr777.xyz/tags/wireguard/</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/acm/</loc>
     <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -317,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://kr777.xyz/tags/C-C/</loc>
-    <lastmod>2023-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kr777.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -332,6 +325,13 @@
   
   <url>
     <loc>https://kr777.xyz/tags/c/</loc>
+    <lastmod>2023-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kr777.xyz/tags/C-C/</loc>
     <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
