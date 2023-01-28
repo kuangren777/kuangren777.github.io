@@ -182,6 +182,34 @@
   </entry>
   
   <entry>
+    <title>OSS测试</title>
+    <link href="https://kr777.xyz/2022/10/24/test/"/>
+    <id>https://kr777.xyz/2022/10/24/test/</id>
+    <published>2022-10-24T05:42:46.000Z</published>
+    <updated>2023-01-28T04:38:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>请查看以下图片，以下图片为使用cdn链接上传</p><p><img src="http://krleanote.asia/Markdown_IMG/202301281238151.png" alt="image-20230128123800095"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;请查看以下图片，以下图片为使用cdn链接上传&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://krleanote.asia/Markdown_IMG/202301281238151.png&quot; alt=&quot;image-20230128123800095&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="python" scheme="https://kr777.xyz/tags/python/"/>
+    
+    <category term="acm" scheme="https://kr777.xyz/tags/acm/"/>
+    
+    <category term="算法" scheme="https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>实验3：算术表达式求值（附源码）</title>
     <link href="https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/"/>
     <id>https://kr777.xyz/2022/10/24/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E6%8A%A5%E5%91%8A/</id>
