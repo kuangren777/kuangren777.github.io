@@ -6,7 +6,7 @@
   <link href="https://kr777.xyz/atom.xml" rel="self"/>
   
   <link href="https://kr777.xyz/"/>
-  <updated>2023-01-28T04:39:42.000Z</updated>
+  <updated>2022-11-07T12:49:23.000Z</updated>
   <id>https://kr777.xyz/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>OSS测试</title>
-    <link href="https://kr777.xyz/2023/01/28/test/"/>
-    <id>https://kr777.xyz/2023/01/28/test/</id>
-    <published>2023-01-28T04:39:46.000Z</published>
-    <updated>2023-01-28T04:39:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>请查看以下图片，以下图片为使用cdn链接上传</p><p><img src="http://krleanote.asia/Markdown_IMG/202301281238151.png" alt="image-20230128123800095"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;请查看以下图片，以下图片为使用cdn链接上传&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://krleanote.asia/Markdown_IMG/202301281238151.png&quot; alt=&quot;image-20230128123800095&quot;&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="python" scheme="https://kr777.xyz/tags/python/"/>
-    
-    <category term="acm" scheme="https://kr777.xyz/tags/acm/"/>
-    
-    <category term="算法" scheme="https://kr777.xyz/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
   
   <entry>
     <title>CTF校内赛（RSA公钥的加密解密）</title>
@@ -288,9 +260,9 @@
     
     
     
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
-    
     <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
+    
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
   </entry>
   
@@ -309,11 +281,11 @@
     
     
     
-    <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
+    <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
     
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
-    <category term="docker" scheme="https://kr777.xyz/tags/docker/"/>
+    <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
     
     <category term="内网穿透" scheme="https://kr777.xyz/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
@@ -336,13 +308,13 @@
     
     
     
-    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
-    
-    <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
-    <category term="云服务器" scheme="https://kr777.xyz/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
+    
+    <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   
@@ -361,13 +333,13 @@
     
     
     
+    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
+    
     <category term="ssr" scheme="https://kr777.xyz/tags/ssr/"/>
     
     <category term="科学上网" scheme="https://kr777.xyz/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
     <category term="ubuntu" scheme="https://kr777.xyz/tags/ubuntu/"/>
-    
-    <category term="cent os" scheme="https://kr777.xyz/tags/cent-os/"/>
     
   </entry>
   
@@ -444,9 +416,9 @@
     <link href="https://kr777.xyz/2022/08/12/1%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%EF%BC%89%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>https://kr777.xyz/2022/08/12/1%E3%80%81%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88Hexo%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%EF%BC%89%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2022-08-12T02:22:55.000Z</published>
-    <updated>2023-01-28T03:53:48.000Z</updated>
+    <updated>2023-01-28T05:11:32.000Z</updated>
     
-    <content type="html"><![CDATA[<p>本教程合集旨在帮助你从零完成一个完全属于自己的博客。</p><span id="more"></span><p><img src="http://krleanote.asia/Markdown_IMG/202301281151709.png" alt="image-20230128115136660"></p><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Hexo本地部署"><a href="#Hexo本地部署" class="headerlink" title="Hexo本地部署"></a>Hexo本地部署</h2><h3 id="node-js下载"><a href="#node-js下载" class="headerlink" title="node.js下载"></a>node.js下载</h3><!--more--><p><a href="https://nodejs.org/" title="nodejs下载">node.js下载地址</a></p><p>下载左边的长期版本</p><img src="http://krleanote.asia/Markdown_IMG/202208121243698.png" alt="image-20220812下午124335658" style="zoom: 50%;" /><p>然后一直同意，下一步。。。</p><img src="http://krleanote.asia/Markdown_IMG/202208121244559.png" alt="image-20220812下午124442522" style="zoom:50%;" /><p>安装后里面含有Node.js和npm包管理器。</p><p>打开终端，切换root用户</p><pre class="line-numbers language-none"><code class="language-none">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看node和npm版本</p><pre class="line-numbers language-none"><code class="language-none">node -vnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>用npm安装cnpm（国内淘宝镜像源）（<code>-g</code>为全局安装）</p><pre class="line-numbers language-none"><code class="language-none">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>看到下面这个就算安装完成了</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121253963.png" alt="image-20220812下午125324931"></p><p>查看cnpm版本</p><pre class="line-numbers language-none"><code class="language-none">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>然后安装hexo</p><pre class="line-numbers language-none"><code class="language-none">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><img src="http://krleanote.asia/Markdown_IMG/202208121547330.png" alt="image-20220812下午34709253"  /><p>这样就算安装完成了</p><p>查看hexo版本</p><pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="http://krleanote.asia/Markdown_IMG/202208121550109.png" alt="image-20220812下午35036065"></p><p>查看自己的路径<code>pwd</code></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121553763.png" alt="image-20220812下午35355729"></p><p>建立空的文件夹<code>myblog</code></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121556550.png" alt="image-20220812下午35613510"></p><p>东西都是在这个目录里，做错了直接把这个凎掉重来就行</p><p>然后进入这个文件夹</p><pre class="line-numbers language-none"><code class="language-none">cd myblog&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>接着用hexo直接生成博客</p><pre class="line-numbers language-none"><code class="language-none">sudo hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>等待一段时间，下图这样就完成了</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121600206.png" alt="image-20220812下午40040155"></p><p>里面生成了很多文件</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121602339.png" alt="image-20220812下午40210301"></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121602322.png" alt="image-20220812下午40229289"></p><hr><p>这里插入一些hexo常用指令</p><pre class="line-numbers language-none"><code class="language-none">#hexo之一键三连hexo clean#清理缓存hexo g#生成博客hexo s#启动博客，在本地http:&#x2F;&#x2F;localhost:4000&#x2F;可以预览<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;hexo d#远程同步到服务器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><hr><p>用<code>hexo s</code>生成博客，并在<a href="http://localhost:4000/">本地</a>可以预览</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121607173.png" alt="image-20220812下午40718128"></p><p>新建博客</p><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>&#x3D;&#x3D;INFO Created: &#x2F;Users&#x2F;luomingyu&#x2F;myblog&#x2F;source&#x2F;_posts&#x2F;你的博客文章名.md&#x3D;&#x3D;</p><p>进入上面的博客地址</p><pre class="line-numbers language-none"><code class="language-none">cd source&#x2F;_posts&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>ls -l</code>发现里面生成了一篇文章</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121615864.png" alt="image-20220812下午41501815"></p><p>打开这个文件就可以编辑，我这里直接用终端编辑</p><pre class="line-numbers language-none"><code class="language-none">vim 你的博客文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>i</code>进入编辑，MarkDown语法</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span><span class="token front-matter yaml language-yaml">title: 你的博客文章名date: 2022-08-12 16:11:18tags:</span><span class="token punctuation">---</span></span><span class="token title important"><span class="token punctuation">#</span> 大家好，这是我的第一篇博客</span><span class="token title important"><span class="token punctuation">##</span> 标题</span><span class="token title important">内容<span class="token punctuation">---</span></span><span class="token title important"><span class="token punctuation">##</span> 标题</span><span class="token title important">内容<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>Esc</code>后<code>:wq</code>保存并退出</p><p>退回<code>myblog</code>主目录</p><pre class="line-numbers language-none"><code class="language-none">cd ..&#x2F;..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>清理，生成，发布</p><pre class="line-numbers language-none"><code class="language-none">hexo cleanhexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>这时候进入<a href="http://localhost:4000/%E5%B0%B1%E5%87%BA%E7%8E%B0%E5%88%9A%E6%89%8D%E5%86%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://localhost:4000/就出现刚才写的博客了</a></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121629317.png" alt="image-20220812下午42941264"></p><p>&#x3D;&#x3D;<strong>到这里，hexo搭建完成了</strong>&#x3D;&#x3D;</p><p>下一篇：从零搭建自己的博客（Hexo+Github+阿里云+宝塔面板）（二）</p>]]></content>
+    <content type="html"><![CDATA[<p>本教程合集旨在帮助你从零完成一个完全属于自己的博客。</p><span id="more"></span><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Hexo本地部署"><a href="#Hexo本地部署" class="headerlink" title="Hexo本地部署"></a>Hexo本地部署</h2><h3 id="node-js下载"><a href="#node-js下载" class="headerlink" title="node.js下载"></a>node.js下载</h3><!--more--><p><a href="https://nodejs.org/" title="nodejs下载">node.js下载地址</a></p><p>下载左边的长期版本</p><img src="http://krleanote.asia/Markdown_IMG/202208121243698.png" alt="image-20220812下午124335658" style="zoom: 50%;" /><p>然后一直同意，下一步。。。</p><img src="http://krleanote.asia/Markdown_IMG/202208121244559.png" alt="image-20220812下午124442522" style="zoom:50%;" /><p>安装后里面含有Node.js和npm包管理器。</p><p>打开终端，切换root用户</p><pre class="line-numbers language-none"><code class="language-none">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看node和npm版本</p><pre class="line-numbers language-none"><code class="language-none">node -vnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>用npm安装cnpm（国内淘宝镜像源）（<code>-g</code>为全局安装）</p><pre class="line-numbers language-none"><code class="language-none">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>看到下面这个就算安装完成了</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121253963.png" alt="image-20220812下午125324931"></p><p>查看cnpm版本</p><pre class="line-numbers language-none"><code class="language-none">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>然后安装hexo</p><pre class="line-numbers language-none"><code class="language-none">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><img src="http://krleanote.asia/Markdown_IMG/202208121547330.png" alt="image-20220812下午34709253"  /><p>这样就算安装完成了</p><p>查看hexo版本</p><pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="http://krleanote.asia/Markdown_IMG/202208121550109.png" alt="image-20220812下午35036065"></p><p>查看自己的路径<code>pwd</code></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121553763.png" alt="image-20220812下午35355729"></p><p>建立空的文件夹<code>myblog</code></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121556550.png" alt="image-20220812下午35613510"></p><p>东西都是在这个目录里，做错了直接把这个凎掉重来就行</p><p>然后进入这个文件夹</p><pre class="line-numbers language-none"><code class="language-none">cd myblog&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>接着用hexo直接生成博客</p><pre class="line-numbers language-none"><code class="language-none">sudo hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>等待一段时间，下图这样就完成了</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121600206.png" alt="image-20220812下午40040155"></p><p>里面生成了很多文件</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121602339.png" alt="image-20220812下午40210301"></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121602322.png" alt="image-20220812下午40229289"></p><hr><p>这里插入一些hexo常用指令</p><pre class="line-numbers language-none"><code class="language-none">#hexo之一键三连hexo clean#清理缓存hexo g#生成博客hexo s#启动博客，在本地http:&#x2F;&#x2F;localhost:4000&#x2F;可以预览<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;hexo d#远程同步到服务器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><hr><p>用<code>hexo s</code>生成博客，并在<a href="http://localhost:4000/">本地</a>可以预览</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121607173.png" alt="image-20220812下午40718128"></p><p>新建博客</p><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;你的博客文章名&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>&#x3D;&#x3D;INFO Created: &#x2F;Users&#x2F;luomingyu&#x2F;myblog&#x2F;source&#x2F;_posts&#x2F;你的博客文章名.md&#x3D;&#x3D;</p><p>进入上面的博客地址</p><pre class="line-numbers language-none"><code class="language-none">cd source&#x2F;_posts&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>ls -l</code>发现里面生成了一篇文章</p><p><img src="http://krleanote.asia/Markdown_IMG/202208121615864.png" alt="image-20220812下午41501815"></p><p>打开这个文件就可以编辑，我这里直接用终端编辑</p><pre class="line-numbers language-none"><code class="language-none">vim 你的博客文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>i</code>进入编辑，MarkDown语法</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span><span class="token front-matter yaml language-yaml">title: 你的博客文章名date: 2022-08-12 16:11:18tags:</span><span class="token punctuation">---</span></span><span class="token title important"><span class="token punctuation">#</span> 大家好，这是我的第一篇博客</span><span class="token title important"><span class="token punctuation">##</span> 标题</span><span class="token title important">内容<span class="token punctuation">---</span></span><span class="token title important"><span class="token punctuation">##</span> 标题</span><span class="token title important">内容<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>Esc</code>后<code>:wq</code>保存并退出</p><p>退回<code>myblog</code>主目录</p><pre class="line-numbers language-none"><code class="language-none">cd ..&#x2F;..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>清理，生成，发布</p><pre class="line-numbers language-none"><code class="language-none">hexo cleanhexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>这时候进入<a href="http://localhost:4000/%E5%B0%B1%E5%87%BA%E7%8E%B0%E5%88%9A%E6%89%8D%E5%86%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">http://localhost:4000/就出现刚才写的博客了</a></p><p><img src="http://krleanote.asia/Markdown_IMG/202208121629317.png" alt="image-20220812下午42941264"></p><p>&#x3D;&#x3D;<strong>到这里，hexo搭建完成了</strong>&#x3D;&#x3D;</p><p>下一篇：从零搭建自己的博客（Hexo+Github+阿里云+宝塔面板）（二）</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;本教程合集旨在帮助你从零完成一个完全属于自己的博客。&lt;/p&gt;</summary>
