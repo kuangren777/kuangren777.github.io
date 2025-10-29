@@ -1,9 +1,14 @@
 services:
   jekyll-site:
     image: jekyll-site
-    build: .
+    build: 
+      context: .
+      args:
+        - http_proxy=http://100.64.88.205:5678
+        - https_proxy=http://100.64.88.205:5678
     volumes: [ .:/usr/src/app ]
-    ports: [ 4000:4000 ]
+    ports: [ 4753:4753 ]
     user: 1000:1000
     environment: [ JEKYLL_ENV=docker ]
-    command: jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml
+    command: jekyll serve -H 0.0.0.0 -w -P 4753 --config _config.yml,_config_docker.yml
+    restart: unless-stopped
