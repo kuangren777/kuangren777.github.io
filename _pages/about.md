@@ -4,12 +4,11 @@ title: "🏡 Homepage"
 author_profile: true
 ---
 
-He is a Ph.D. student at the School of Computer Science at Fudan University, advised by Prof. [Binxing Fang](https://baike.baidu.com/item/%E6%96%B9%E6%BB%A8%E5%85%B4/9525950) and co-advised by Prof. [Ping Chen](https://ibd.fudan.edu.cn/3d/40/c24067a736576/page.htm). He is also a visiting student at the Hong Kong University of Science and Technology (HKUST), following [Dongdong She](https://cse.hkust.edu.hk/~dongdong/). He received his Bachelor's degree in Computer Science and Technology from Shanghai Maritime University in June 2025.
+He is a visiting student at the Hong Kong University of Science and Technology (HKUST), following [Dongdong She](https://cse.hkust.edu.hk/~dongdong/). He received his Bachelor's degree in Computer Science and Technology from Shanghai Maritime University in June 2025.
 
 His current research interests include Large Model Security, Agent Security, and Endogenous Security.
 
 ## 🎓 Education
-- **Fudan University**, Ph.D. in Artificial Intelligence, 2025-Now
 - **Hong Kong University of Science and Technology (HKUST)**, Visiting Student, 2025-Now
 - **Shanghai Maritime University**, B.S. in Computer Science and Technology, 2021-2025
 
@@ -35,10 +34,6 @@ His current research interests include Large Model Security, Agent Security, and
   <div class="news-item">
     <div class="news-date">September 2025</div>
     <div class="news-content">🚀 The latest paper "<strong>On the Security of Tool-Invocation Prompts for LLM-Based Agentic Systems</strong>" is available on arXiv! <a href="https://arxiv.org/abs/2509.05755">[Link]</a></div>
-  </div>
-  <div class="news-item">
-    <div class="news-date">September 2025</div>
-    <div class="news-content">🎂 Joining Fudan University as a Ph.D. student in Fall 2025!</div>
   </div>
   <div class="news-item">
     <div class="news-date">August 2025</div>

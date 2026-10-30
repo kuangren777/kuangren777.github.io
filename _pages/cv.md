@@ -17,7 +17,6 @@ redirect_from:
 
 Education
 ======
-* **Ph.D. in Computer Science**, Fudan University, 2025 (expected)
 * **B.Eng. in Computer Science**, Shanghai Maritime University, 2021
 
 Research Interests
