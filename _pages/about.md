@@ -62,5 +62,7 @@ His current research interests include Large Model Security, Agent Security, and
   {% include archive-single-cv.html %}
 {% endfor %}</ul>
 
+<!-- CV PDF withdrawn 2026-10-31
 ## 🔗 More Information
 His CV is available here: [[CV]](/files/lmy_cv.pdf)
+-->

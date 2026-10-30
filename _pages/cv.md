@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download full CV (PDF)]({{ "/files/lmy_cv.pdf" | relative_url }}){: .btn .btn--primary}
+<!-- CV PDF withdrawn 2026-10-31: [Download full CV (PDF)]({{ "/files/lmy_cv.pdf" | relative_url }}){: .btn .btn--primary} -->
 
 <!-- <object data="{{ "/files/lmy_cv.pdf" | relative_url }}" type="application/pdf" width="100%" height="1000px">
   <p>Your browser does not support embedded PDFs. You can <a href="{{ "/files/lmy_cv.pdf" | relative_url }}">download the CV (PDF)</a>.</p>
