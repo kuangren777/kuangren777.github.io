@@ -10,7 +10,7 @@ sitemap: false
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mingyu LUO</title>
-<meta name="description" content="Mingyu LUO — Ph.D. student at Fudan University, visiting student at HKUST. LLM & Agent Security.">
+<meta name="description" content="Mingyu LUO — visiting student at HKUST. LLM & Agent Security.">
 <link rel="icon" type="image/png" href="https://my.drluo.cn/images/favicon-32x32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,9 +90,9 @@ function data(lang){
   const zh = lang==='zh';
   const t = zh ? {
     statusA:'在读', statusB:'寻求合作', name:'骆明宇', nameAlt:'MINGYU LUO',
-    role1:'复旦大学 · 博士生', role2:'香港科技大学 · 访问学生', location:'中国 · 上海', org:'复旦大学',
+    role1:'香港科技大学 · 访问学生', role2:'大模型与智能体安全', location:'中国 · 上海', org:'香港科技大学',
     email:'电子邮件', cv:'下载简历', updated:'最近更新', navHome:'主页', navPubs:'论文', viewAll:'查看全部',
-    kicker:'博士生 · 大模型与智能体安全', heroA:'让大模型与智能体', heroB:'更安全可信',
+    kicker:'研究方向 · 大模型与智能体安全', heroA:'让大模型与智能体', heroB:'更安全可信',
     secAbout:'关于', secEdu:'教育经历', secNews:'最新动态', secPubs:'代表性论文', secAwards:'荣誉奖项',
     pubsKicker:'研究成果 · 同行评审与预印本', pubsHeading:'论文发表',
     statPapers:'论文', statVenues:'发表渠道', statSpan:'时间跨度', viewDetail:'查看详情',
@@ -100,9 +100,9 @@ function data(lang){
     back:'返回论文列表', secResources:'资源链接', secCitation:'推荐引用',
   } : {
     statusA:'AVAILABLE', statusB:'OPEN TO COLLAB', name:'骆明宇', nameAlt:'MINGYU LUO',
-    role1:'Ph.D. Student · Fudan University', role2:'Visiting Student · HKUST', location:'Shanghai, China', org:'Fudan University',
+    role1:'Visiting Student · HKUST', role2:'LLM & Agent Security', location:'Shanghai, China', org:'HKUST',
     email:'Email', cv:'Download CV', updated:'LAST UPDATED', navHome:'Home', navPubs:'Publications', viewAll:'View all',
-    kicker:'PH.D. STUDENT · LLM & AGENT SECURITY', heroA:'Securing large models and', heroB:'autonomous agents',
+    kicker:'RESEARCH · LLM & AGENT SECURITY', heroA:'Securing large models and', heroB:'autonomous agents',
     secAbout:'About', secEdu:'Education', secNews:'News', secPubs:'Selected Publications', secAwards:'Awards',
     pubsKicker:'RESEARCH OUTPUT · PEER-REVIEWED & PREPRINTS', pubsHeading:'Publications',
     statPapers:'Papers', statVenues:'Venues', statSpan:'Span', viewDetail:'View detail',
@@ -111,19 +111,17 @@ function data(lang){
   };
   const SECT = { abstract: zh?'摘要':'Abstract', motivation: zh?'研究动机':'Motivation', methodology: zh?'方法':'Methodology', results: zh?'主要结果':'Key Results' };
   const bioParas = zh ? [
-    { parts:[ {text:'骆明宇是复旦大学计算机科学技术学院博士生，师从 ',plain:true},{text:'方滨兴',href:'https://baike.baidu.com/item/%E6%96%B9%E6%BB%A8%E5%85%B4/9525950',isLink:true},{text:' 院士，并由 ',plain:true},{text:'陈平',href:'https://ibd.fudan.edu.cn/3d/40/c24067a736576/page.htm',isLink:true},{text:' 教授共同指导。他同时担任香港科技大学（HKUST）访问学生，跟随 ',plain:true},{text:'Dongdong She',href:'https://cse.hkust.edu.hk/~dongdong/',isLink:true},{text:' 开展研究，并于 2025 年 6 月在上海海事大学获得计算机科学与技术学士学位。',plain:true} ]},
+    { parts:[ {text:'骆明宇是香港科技大学（HKUST）访问学生，跟随 ',plain:true},{text:'Dongdong She',href:'https://cse.hkust.edu.hk/~dongdong/',isLink:true},{text:' 开展研究，并于 2025 年 6 月在上海海事大学获得计算机科学与技术学士学位。',plain:true} ]},
     { parts:[ {text:'他的研究聚焦于大模型与自主智能体的安全，方向涵盖大模型安全、智能体安全与内生安全。',plain:true} ]},
   ] : [
-    { parts:[ {text:'Mingyu Luo is a Ph.D. student at the School of Computer Science, Fudan University, advised by Prof. ',plain:true},{text:'Binxing Fang',href:'https://baike.baidu.com/item/%E6%96%B9%E6%BB%A8%E5%85%B4/9525950',isLink:true},{text:' and co-advised by Prof. ',plain:true},{text:'Ping Chen',href:'https://ibd.fudan.edu.cn/3d/40/c24067a736576/page.htm',isLink:true},{text:'. He is also a visiting student at HKUST, working with ',plain:true},{text:'Dongdong She',href:'https://cse.hkust.edu.hk/~dongdong/',isLink:true},{text:', and received his B.S. in Computer Science & Technology from Shanghai Maritime University in June 2025.',plain:true} ]},
+    { parts:[ {text:'Mingyu Luo is a visiting student at HKUST, working with ',plain:true},{text:'Dongdong She',href:'https://cse.hkust.edu.hk/~dongdong/',isLink:true},{text:', and received his B.S. in Computer Science & Technology from Shanghai Maritime University in June 2025.',plain:true} ]},
     { parts:[ {text:'His research centers on the security of large models and autonomous agents — spanning Large Model Security, Agent Security, and Endogenous Security.',plain:true} ]},
   ];
   const interests = zh ? ['大模型安全','智能体安全','内生安全','间接提示注入','RAG 投毒'] : ['Large Model Security','Agent Security','Endogenous Security','Indirect Prompt Injection','RAG Poisoning'];
   const education = zh ? [
-    { period:'2025 — 至今', school:'复旦大学', degree:'人工智能 · 博士在读' },
     { period:'2025 — 至今', school:'香港科技大学 HKUST', degree:'访问学生' },
     { period:'2021 — 2025', school:'上海海事大学', degree:'计算机科学与技术 · 学士' },
   ] : [
-    { period:'2025 — Now', school:'Fudan University', degree:'Ph.D. in Artificial Intelligence' },
     { period:'2025 — Now', school:'Hong Kong University of Science & Technology', degree:'Visiting Student' },
     { period:'2021 — 2025', school:'Shanghai Maritime University', degree:'B.S. in Computer Science & Technology' },
   ];
@@ -135,7 +133,6 @@ function data(lang){
     { date:'2025.10', tag:'EMNLP 2025', kind:'accept', en:'Paper accepted to', zh:'论文被接收 ·', title:'RevPRAG: Revealing Poisoning Attacks in Retrieval-Augmented Generation through LLM Activation Analysis', link:'https://aclanthology.org/2025.findings-emnlp.698/', linkLabel:'ACL Anthology' },
     { date:'2025.09', tag:'机器之心', kind:'media', en:'Featured by', zh:'被报道 ·', title: zh?'研究成果登上「机器之心」公众号':'Research featured on the 机器之心 (Synced) WeChat account', link:'https://mp.weixin.qq.com/s/NyNHgKSBUYDK1BVDBChsdQ', linkLabel: zh?'阅读':'Read more' },
     { date:'2025.09', tag:'arXiv', kind:'pre', en:'Preprint available', zh:'预印本发布', title:'On the Security of Tool-Invocation Prompts for LLM-Based Agentic Systems', link:'https://arxiv.org/abs/2509.05755', linkLabel:'arXiv:2509.05755' },
-    { date:'2025.09', tag:'Milestone', kind:'mile', en:'Started', zh:'新阶段 ·', title: zh?'以博士生身份加入复旦大学（2025 年秋季入学）':'Joined Fudan University as a Ph.D. student in Fall 2025', link:'', linkLabel:'' },
     { date:'2025.06', tag:'Award', kind:'award', en:'Honored to receive', zh:'荣获 ·', title: zh?'上海市优秀毕业生':'Shanghai Outstanding Graduate', link:'', linkLabel:'' },
     { date:'2023.12', tag:'IJIN', kind:'accept', en:'Paper accepted to', zh:'论文被接收 ·', title:'Multi-sensor based strategy learning with deep reinforcement learning for unmanned ground vehicle', link:'https://www.sciencedirect.com/science/article/pii/S2666603023000313', linkLabel:'Link' },
   ];
